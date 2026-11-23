@@ -1,0 +1,18 @@
+{
+  "products": [
+    {
+      "name": "Vitamin C Brightening Serum 30ml",
+      "description": "A daily glow serum with 15% vitamin C.",
+      "price": "12.99",
+      "image": "",
+      "link": "https://www.amazon.co.uk/s?k=vitamin+c+brightening+serum"
+    },
+    {
+      "name": "Heatless Curling Ribbon Set",
+      "description": "The overnight ribbon curler everyone is talking about.",
+      "price": "6.99",
+      "image": "",
+      "link": "https://www.amazon.co.uk/s?k=heatless+curling+ribbon"
+    }
+  ]
+}
