@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dansy Mart | Beauty Products &amp; Hair Styling Accessories on Amazon UK</title>
+<meta name="description" content="Discover hand-picked beauty products and hair styling accessories on Amazon UK — skincare, heatless curlers, styling tools and vanity storage at premium-yet-affordable prices.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dansy Mart">
+<meta property="og:title" content="Dansy Mart | Beauty Products &amp; Hair Styling Accessories on Amazon UK">
+<meta property="og:description" content="Hand-picked beauty and hair styling essentials from Amazon UK. Tested, trusted, and genuinely worth your money.">
+<meta name="theme-color" content="#C24E6D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   1. DESIGN TOKENS
+   ========================================================= */
+:root{
+  --cream:#FBF7F0;
+  --cream-deep:#F6EEE3;
+  --white:#FFFFFF;
+  --ink:#221C1F;
+  --muted:#6E6470;
+  --rose:#C24E6D;
+  --rose-bright:#E4728F;
+  --rose-soft:#FBE4EA;
+  --gold:#C7A76A;
+  --gold-soft:#F0E3C8;
+  --silver:#C2C7CE;
+  --line:rgba(34,28,31,.10);
+  --radius:22px;
+  --radius-sm:14px;
+  --shadow:0 22px 48px -30px rgba(120,50,80,.55);
+  --shadow-soft:0 10px 26px -20px rgba(120,50,80,.6);
+  --max:1180px;
+}
+
+/* =========================================================
+   2. BASE
+   ========================================================= */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--cream);color:var(--ink);
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;line-height:1.15;margin:0;letter-spacing:-.015em;font-weight:700}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+button{font-family:inherit}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px;border-radius:6px}
+
+.container{width:100%;max-width:var(--max);margin:0 auto;padding:0 22px}
+.section{padding:74px 0}
+.section--tint{background:linear-gradient(180deg,var(--cream) 0%,var(--cream-deep) 100%)}
+.section-head{max-width:660px;margin:0 0 40px}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.eyebrow{
+  display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--rose);margin-bottom:12px;
+}
+.eyebrow::after{content:"";display:block;width:38px;height:2px;margin-top:8px;
+  background:linear-gradient(90deg,var(--gold),transparent);border-radius:2px}
+.section-head.center .eyebrow::after{margin-left:auto;margin-right:auto;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.section-head h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin-bottom:12px}
+.section-head p{color:var(--muted);font-size:1.02rem}
+
+/* =========================================================
+   3. DISCLOSURE BAR + HEADER
+   ========================================================= */
+.disclosure-bar{
+  background:linear-gradient(90deg,var(--rose) 0%,var(--rose-bright) 55%,var(--gold) 100%);
+  color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.03em;
+  text-align:center;padding:9px 16px;
+}
+.site-header{
+  position:sticky;top:0;z-index:60;background:rgba(251,247,240,.9);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;height:74px;position:relative}
+.logo{display:flex;align-items:center;gap:9px;font-family:'Playfair Display',serif;
+  font-size:23px;font-weight:800;letter-spacing:-.03em;white-space:nowrap}
+.logo .dot{width:10px;height:10px;border-radius:50%;flex:0 0 auto;
+  background:linear-gradient(140deg,var(--rose),var(--gold));box-shadow:0 0 0 3px rgba(199,167,106,.18)}
+.logo em{font-style:normal;color:var(--rose)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{
+  padding:9px 15px;border-radius:999px;font-size:14.5px;font-weight:600;color:#4C4249;
+  transition:background .18s ease,color .18s ease;
+}
+.nav-links a:hover{background:var(--rose-soft);color:var(--rose)}
+.nav-links a.active{background:linear-gradient(100deg,var(--rose),var(--rose-bright));color:#fff;
+  box-shadow:0 10px 20px -14px rgba(194,78,109,1)}
+.burger{
+  display:none;align-items:center;justify-content:center;width:44px;height:44px;
+  border-radius:12px;border:1.5px solid var(--line);background:#fff;cursor:pointer;
+}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;
+  background:var(--ink);border-radius:2px;transition:.2s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+
+/* =========================================================
+   4. BUTTONS
+   ========================================================= */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  padding:14px 26px;border-radius:999px;font-weight:700;font-size:15px;
+  border:0;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,color .18s,border-color .18s;
+}
+.btn-primary{background:linear-gradient(100deg,var(--rose),var(--rose-bright));color:#fff;
+  box-shadow:0 16px 30px -18px rgba(194,78,109,.95)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 22px 36px -18px rgba(194,78,109,1)}
+.btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line);box-shadow:var(--shadow-soft)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--rose);transform:translateY(-2px)}
+.btn-amazon{
+  display:flex;width:100%;align-items:center;justify-content:center;gap:.5rem;
+  margin-top:auto;padding:13px 18px;border-radius:999px;
+  background:linear-gradient(100deg,var(--rose),var(--rose-bright));
+  color:#fff;font-weight:800;font-size:14px;letter-spacing:.02em;position:relative;overflow:hidden;
+  box-shadow:0 14px 26px -16px rgba(194,78,109,.95);
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.btn-amazon::after{
+  content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);
+  transform:skewX(-18deg);transition:left .55s ease;
+}
+.btn-amazon:hover{transform:translateY(-2px);box-shadow:0 20px 32px -16px rgba(194,78,109,1)}
+.btn-amazon:hover::after{left:120%}
+
+/* =========================================================
+   5. HERO
+   ========================================================= */
+.hero{position:relative;overflow:hidden;padding:64px 0 78px;
+  background:
+    radial-gradient(900px 420px at 88% -10%,rgba(228,114,143,.20),transparent 70%),
+    radial-gradient(700px 380px at 6% 110%,rgba(199,167,106,.20),transparent 70%),
+    var(--cream);
+}
+.hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.pill{
+  display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;
+  background:#fff;border:1px solid rgba(199,167,106,.45);color:#8A6B3E;
+  font-size:12.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  box-shadow:var(--shadow-soft);margin-bottom:20px;
+}
+.hero h1{font-size:clamp(2.3rem,5.4vw,4rem);line-height:1.04;letter-spacing:-.03em;margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--rose);position:relative;white-space:nowrap}
+.hero h1 em::after{
+  content:"";position:absolute;left:0;right:0;bottom:.02em;height:.16em;z-index:-1;
+  background:linear-gradient(90deg,rgba(199,167,106,.55),rgba(228,114,143,.35));border-radius:999px;
+}
+.hero .lead{font-size:1.09rem;color:var(--muted);max-width:52ch;margin-bottom:30px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px}
+.hero-stats{display:flex;flex-wrap:wrap;gap:30px}
+.hero-stats div{display:flex;flex-direction:column}
+.hero-stats strong{font-family:'Playfair Display',serif;font-size:1.5rem;line-height:1.1}
+.hero-stats small{font-size:12.5px;color:var(--muted);font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+
+/* hero artwork */
+.hero-art{position:relative;min-height:420px;display:grid;place-items:center}
+.art-main{
+  width:100%;max-width:400px;aspect-ratio:1/1.06;border-radius:34px;position:relative;
+  background:linear-gradient(150deg,#F8D3DD 0%,#F6E3C9 52%,#EEDCEA 100%);
+  box-shadow:0 40px 70px -44px rgba(120,50,80,.85),inset 0 0 0 1px rgba(255,255,255,.7);
+  display:grid;place-items:center;overflow:hidden;
+}
+.art-main::before{
+  content:"";position:absolute;width:120%;height:120%;border-radius:50%;
+  background:radial-gradient(circle at 32% 26%,rgba(255,255,255,.85),transparent 55%);
+}
+.art-main .art-emoji{font-size:120px;line-height:1;position:relative;
+  filter:drop-shadow(0 22px 30px rgba(120,50,80,.22));animation:floaty 6s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-14px) rotate(3deg)}}
+.art-chip{
+  position:absolute;display:flex;align-items:center;gap:11px;padding:12px 16px;border-radius:16px;
+  background:rgba(255,255,255,.95);box-shadow:0 20px 38px -24px rgba(120,50,80,.9);
+  border:1px solid rgba(255,255,255,.9);backdrop-filter:blur(6px);
+}
+.art-chip span{font-size:22px}
+.art-chip strong{display:block;font-size:13.5px;line-height:1.2}
+.art-chip small{display:block;font-size:11.5px;color:var(--muted);font-weight:600}
+.chip-1{top:14px;left:-8px;transform:rotate(-5deg)}
+.chip-2{bottom:34px;right:-10px;transform:rotate(4deg)}
+.chip-3{bottom:-6px;left:26px;transform:rotate(-2deg)}
+
+/* =========================================================
+   6. TRUST STRIP
+   ========================================================= */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.5)}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:26px 0}
+.trust-item{display:flex;align-items:center;gap:12px}
+.trust-item .ti-ico{
+  width:42px;height:42px;flex:0 0 auto;border-radius:13px;display:grid;place-items:center;
+  background:linear-gradient(140deg,var(--rose-soft),var(--gold-soft));font-size:19px;
+}
+.trust-item strong{display:block;font-size:14.5px;line-height:1.3}
+.trust-item small{color:var(--muted);font-size:12.5px;font-weight:500}
+
+/* =========================================================
+   7. PRODUCT CARDS
+   ========================================================= */
+.grid{display:grid;gap:26px}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+
+.p-card{
+  display:flex;flex-direction:column;background:var(--white);border-radius:var(--radius);
+  overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-soft);
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+.p-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:rgba(199,167,106,.5)}
+.p-media{
+  position:relative;aspect-ratio:4/3;display:grid;place-items:center;overflow:hidden;
+  background:linear-gradient(140deg,var(--g1),var(--g2));
+}
+.p-media::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle at 74% 16%,rgba(255,255,255,.6),transparent 58%);
+}
+.p-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+.p-emoji{
+  position:relative;z-index:1;font-size:56px;line-height:1;
+  filter:drop-shadow(0 12px 18px rgba(120,50,80,.2));transition:transform .35s ease;
+}
+.p-card:hover .p-emoji{transform:scale(1.1) rotate(-5deg)}
+.p-badge{
+  position:absolute;top:12px;left:12px;z-index:4;
+  background:rgba(255,255,255,.95);color:var(--rose);font-size:10.5px;font-weight:800;
+  letter-spacing:.09em;text-transform:uppercase;padding:6px 11px;border-radius:999px;
+  box-shadow:0 6px 14px -8px rgba(0,0,0,.5);
+}
+.p-body{display:flex;flex-direction:column;gap:10px;padding:20px;flex:1}
+.p-cat{font-size:11px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--gold)}
+.p-body h3{font-size:1.09rem;line-height:1.28}
+.p-body .p-desc{font-size:13.8px;color:var(--muted);line-height:1.55;flex:1}
+.p-rating{display:flex;align-items:center;gap:8px;font-size:13px}
+.stars{color:var(--gold);letter-spacing:1.5px;font-size:14px}
+.p-reviews{color:var(--muted);font-weight:600;font-size:12.5px}
+.p-price{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--ink)}
+.p-price span{font-family:'Inter',sans-serif;font-size:.8rem;color:var(--muted);font-weight:600}
+
+/* bold variant for "Top Picks" */
+.p-card--bold{background:linear-gradient(180deg,#fff 0%,#FFF9F5 100%);border-color:rgba(199,167,106,.45)}
+.p-card--bold .p-media{aspect-ratio:1/1}
+.p-card--bold .p-emoji{font-size:74px}
+.p-card--bold .p-body h3{font-size:1.2rem}
+
+/* =========================================================
+   8. CATEGORY TILES
+   ========================================================= */
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.cat-tile{
+  position:relative;display:flex;flex-direction:column;gap:8px;
+  padding:30px 26px;border-radius:var(--radius);overflow:hidden;
+  background:linear-gradient(145deg,var(--g1),var(--g2));
+  border:1px solid rgba(255,255,255,.7);box-shadow:var(--shadow-soft);
+  transition:transform .22s ease,box-shadow .22s ease;
+}
+.cat-tile::after{
+  content:"";position:absolute;right:-30px;top:-30px;width:130px;height:130px;border-radius:50%;
+  background:rgba(255,255,255,.45);
+}
+.cat-tile:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.cat-emoji{font-size:32px;position:relative;z-index:1}
+.cat-tile h3{font-size:1.18rem;position:relative;z-index:1}
+.cat-tile p{font-size:13.5px;color:#5D5058;position:relative;z-index:1;line-height:1.5}
+.cat-link{
+  margin-top:12px;font-size:13px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--rose);position:relative;z-index:1;
+}
+.cat-tile:first-child{grid-row:span 1}
+
+/* =========================================================
+   9. BLOG CARDS + POST
+   ========================================================= */
+.post-card{
+  display:flex;flex-direction:column;background:#fff;border-radius:var(--radius);
+  overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-soft);
+  transition:transform .22s ease,box-shadow .22s ease;
+}
+.post-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.post-media{
+  aspect-ratio:16/10;display:grid;place-items:center;
+  background:linear-gradient(140deg,var(--g1),var(--g2));position:relative;overflow:hidden;
+}
+.post-media::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 76% 14%,rgba(255,255,255,.55),transparent 58%)}
+.post-media span{font-size:52px;position:relative;z-index:1;filter:drop-shadow(0 12px 18px rgba(120,50,80,.2))}
+.post-body{padding:22px;display:flex;flex-direction:column;gap:9px;flex:1}
+.kicker{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.post-body h3{font-size:1.14rem;line-height:1.3}
+.post-body p{font-size:13.8px;color:var(--muted);flex:1}
+.read{font-size:13px;font-weight:800;color:var(--rose);letter-spacing:.03em}
+
+/* article layout */
+.post-hero{
+  border-radius:var(--radius);overflow:hidden;position:relative;
+  min-height:300px;display:grid;place-items:center;margin-bottom:34px;
+  background:linear-gradient(140deg,var(--g1),var(--g2));
+  box-shadow:var(--shadow);
+}
+.post-hero::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 78% 12%,rgba(255,255,255,.6),transparent 55%)}
+.post-hero span{font-size:96px;position:relative;z-index:1;filter:drop-shadow(0 20px 28px rgba(120,50,80,.22))}
+.post-head{max-width:760px;margin:0 auto 34px;text-align:center}
+.post-head h1{font-size:clamp(1.85rem,4.2vw,2.9rem);margin:10px 0 16px;letter-spacing:-.025em}
+.post-meta{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;
+  font-size:12.5px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}
+.prose{max-width:740px;margin:0 auto;font-size:1.05rem;line-height:1.78;color:#3B3238}
+.prose h2{font-size:1.5rem;margin:38px 0 14px;letter-spacing:-.02em}
+.prose h3{font-size:1.18rem;margin:28px 0 10px}
+.prose p{margin:0 0 18px}
+.prose ul{margin:0 0 20px;padding-left:0}
+.prose ul li{position:relative;padding-left:26px;margin-bottom:10px}
+.prose ul li::before{content:"✦";position:absolute;left:0;top:0;color:var(--gold);font-size:14px}
+.prose strong{font-weight:700;color:var(--ink)}
+.prose .lead-p{font-size:1.15rem;color:var(--ink);font-weight:500}
+.post-embed{max-width:380px;margin:30px auto}
+.post-embed .p-card{box-shadow:var(--shadow)}
+.pin-row{max-width:740px;margin:44px auto 0;padding-top:28px;border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.pin-btn{
+  display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:999px;
+  background:#fff;border:1.5px solid var(--line);font-weight:700;font-size:14px;
+  box-shadow:var(--shadow-soft);transition:.2s;
+}
+.pin-btn:hover{border-color:var(--rose);color:var(--rose);transform:translateY(-2px)}
+.back-link{font-size:13.5px;font-weight:700;color:var(--muted)}
+.back-link:hover{color:var(--rose)}
+
+/* =========================================================
+   10. CTA STRIP + FOOTER
+   ========================================================= */
+.cta-strip{padding:0 0 74px}
+.cta-box{
+  position:relative;overflow:hidden;border-radius:28px;padding:52px 40px;text-align:center;
+  background:linear-gradient(120deg,#C24E6D 0%,#E4728F 55%,#C7A76A 130%);
+  color:#fff;box-shadow:0 30px 60px -40px rgba(120,50,80,1);
+}
+.cta-box::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 18% 20%,rgba(255,255,255,.28),transparent 55%)}
+.cta-box h2{font-size:clamp(1.6rem,3.4vw,2.2rem);margin-bottom:12px;position:relative}
+.cta-box p{max-width:56ch;margin:0 auto 26px;position:relative;opacity:.95}
+.cta-box .btn{position:relative;background:#fff;color:var(--rose);box-shadow:0 18px 30px -18px rgba(0,0,0,.5)}
+.cta-box .btn:hover{transform:translateY(-2px)}
+
+.site-footer{background:#221C1F;color:#DED5DA;padding:56px 0 0;margin-top:0}
+.footer-inner{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:38px;padding-bottom:40px}
+.footer-brand .logo{color:#fff;margin-bottom:12px}
+.footer-brand p{font-size:13.8px;color:#A79CA3;max-width:36ch;line-height:1.6}
+.footer-col h4{font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:14px;font-weight:800}
+.footer-col a{display:block;font-size:13.8px;padding:5px 0;color:#C7BDC3;transition:color .18s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding:22px 0 30px;
+  display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;align-items:center}
+.footer-bottom p{font-size:12.5px;color:#9A8F96;line-height:1.6}
+.footer-bottom .assoc{color:var(--gold);font-weight:700}
+
+/* =========================================================
+   11. PAGE HEADER (inner pages)
+   ========================================================= */
+.page-head{
+  padding:56px 0 46px;position:relative;overflow:hidden;
+  background:radial-gradient(700px 300px at 80% 0%,rgba(228,114,143,.18),transparent 70%),var(--cream);
+  border-bottom:1px solid var(--line);
+}
+.page-head h1{font-size:clamp(1.9rem,4.6vw,3rem);letter-spacing:-.03em;margin-bottom:14px}
+.page-head p{color:var(--muted);max-width:62ch;font-size:1.02rem}
+.page-head .eyebrow{margin-bottom:10px}
+.empty-note{padding:60px 0;text-align:center;color:var(--muted)}
+
+/* =========================================================
+   12. RESPONSIVE
+   ========================================================= */
+@media (max-width:1000px){
+  .hero-inner{grid-template-columns:1fr;gap:44px}
+  .hero-art{min-height:340px;order:-1}
+  .art-main{max-width:320px}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .footer-brand{grid-column:1/-1}
+}
+@media (max-width:920px){
+  .nav-links{
+    display:none;position:absolute;top:74px;left:0;right:0;flex-direction:column;
+    align-items:stretch;gap:2px;padding:14px 18px 22px;background:var(--cream);
+    border-bottom:1px solid var(--line);box-shadow:0 24px 34px -30px rgba(0,0,0,.7);
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{padding:12px 16px;border-radius:12px;font-size:15px}
+  .burger{display:inline-flex}
+}
+@media (max-width:760px){
+  .section{padding:56px 0}
+  .hero{padding:44px 0 60px}
+  .trust-grid{grid-template-columns:1fr;gap:14px;padding:22px 0}
+  .hero-stats{gap:22px}
+}
+@media (max-width:640px){
+  .grid-3,.grid-2{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .hero-actions .btn{width:100%}
+  .cta-box{padding:40px 22px}
+  .footer-inner{grid-template-columns:1fr;gap:28px}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+  .post-hero{min-height:210px}
+  .post-hero span{font-size:68px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ SITE-WIDE DISCLOSURE ============ -->
+<div class="disclosure-bar">As an Amazon Associate I earn from qualifying purchases.</div>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="#/home" aria-label="Dansy Mart home">
+      <span class="dot" aria-hidden="true"></span>Dansy<em>Mart</em>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#/home">Home</a>
+      <a href="#/categories">Categories</a>
+      <a href="#/best-sellers">Best Sellers</a>
+      <a href="#/budget-picks">Budget Picks</a>
+      <a href="#/blog">Blog</a>
+      <a href="#/about">About</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ APP ============ -->
+<main id="app"></main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="logo"><span class="dot" aria-hidden="true"></span>Dansy<em>Mart</em></div>
+      <p>Hand-picked beauty products &amp; hair styling accessories from Amazon UK — tested, trusted and chosen to help you look and feel your best.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <div id="footerCats"></div>
+    </div>
+    <div class="footer-col">
+      <h4>Site</h4>
+      <a href="#/home">Home</a>
+      <a href="#/best-sellers">Best Sellers</a>
+      <a href="#/budget-picks">Budget Picks</a>
+      <a href="#/blog">Blog</a>
+      <a href="#/about">About</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p class="assoc">As an Amazon Associate I earn from qualifying purchases.</p>
+    <p>© <span id="year"></span> Dansy Mart. Prices &amp; availability are accurate as of the date/time indicated and are subject to change.</p>
+  </div>
+</footer>
+
+<script>
+/* =========================================================================
+   DANSY MART — UPDATED CODE WITH AUTO AFFILIATE TAG
+   ========================================================================= */
+
+// 🔥 AAPKA AMAZON AFFILIATE TAG YAHAN HAI 🔥
+const AMAZON_TAG = 'danish08ee-21';
+
+// Yeh function har link ke aakhir mein automatic aapka tag laga dega
+function getAffiliateLink(url) {
+  if (!url) return '#';
+  // Agar link mein pehle se tag hai, toh waisa hi chhod do
+  if (url.includes('tag=')) return url;
+  
+  // Agar search link hai (?k=...) ya direct link hai (/dp/...)
+  const separator = url.includes('?') ? '&' : '?';
+  return url + separator + 'tag=' + AMAZON_TAG;
+}
+
+// Yeh function search links banata hai (ab isme bhi tag automatic lag jayega)
+const AFF = (q) => 'https://www.amazon.co.uk/s?k=' + encodeURIComponent(q);
+
+/* ---------------------------- CATEGORIES -------------------------------- */
+const CATEGORIES = [
+  {
+    slug: 'skincare-beauty-essentials',
+    name: 'Skincare & Beauty Essentials',
+    emoji: '🧴',
+    blurb: 'Serums, cleansers, moisturisers and daily glow-boosters.',
+    g: ['#FBE0E7', '#F6DEC4']
+  },
+  {
+    slug: 'hair-styling-tools',
+    name: 'Hair Styling Tools',
+    emoji: '💨',
+    blurb: 'Straighteners, dryers and hot brushes that actually last.',
+    g: ['#EDE1F4', '#F9DCE4']
+  },
+  {
+    slug: 'heatless-curlers-hair-accessories',
+    name: 'Heatless Curlers & Hair Accessories',
+    emoji: '🎀',
+    blurb: 'Damage-free curls, claw clips and silk scrunchies.',
+    g: ['#FCE9D6', '#F7D8E2']
+  },
+  {
+    slug: 'makeup-brushes-tools',
+    name: 'Makeup & Brushes',
+    emoji: '💄',
+    blurb: 'Blenders, brush sets and everyday lip essentials.',
+    g: ['#F8DDE5', '#E8DFF3']
+  },
+  {
+    slug: 'beauty-storage-organisers',
+    name: 'Beauty Storage & Organisers',
+    emoji: '🗄️',
+    blurb: 'Acrylic trays, vanity cases and travel pots.',
+    g: ['#E7EAF0', '#F5E6D7']
+  }
+];
+
+/* ----------------------------- PRODUCTS --------------------------------- */
+const PRODUCTS = [
+  {
+    slug: 'vitamin-c-brightening-serum',
+    name: 'Vitamin C Brightening Serum 30ml',
+    category: 'skincare-beauty-essentials',
+    emoji: '🧴', image: '',
+    g: ['#FBE0E7', '#F6D9C4'],
+    rating: 4.6, reviews: 3412,
+    low: 12.99, high: 18.99,
+    badge: 'Best Seller',
+    desc: 'A daily glow serum with 15% vitamin C to brighten dull skin and soften the look of dark spots.',
+    link: AFF('vitamin c brightening serum')
+  },
+  {
+    slug: 'hyaluronic-hydrating-cream',
+    name: 'Hyaluronic Acid Hydrating Cream',
+    category: 'skincare-beauty-essentials',
+    emoji: '💧', image: '',
+    g: ['#E4F0F7', '#F7DFE8'],
+    rating: 4.5, reviews: 1876,
+    low: 9.99, high: 14.50,
+    badge: '',
+    desc: 'Lightweight, fragrance-free moisture that layers beautifully under makeup and never feels greasy.',
+    link: AFF('hyaluronic acid moisturiser')
+  },
+  {
+    slug: 'ceramide-foaming-cleanser',
+    name: 'Ceramide Gentle Foaming Cleanser',
+    category: 'skincare-beauty-essentials',
+    emoji: '🫧', image: '',
+    g: ['#EAF3EE', '#F9E3E9'],
+    rating: 4.7, reviews: 2204,
+    low: 8.49, high: 11.99,
+    badge: 'Editor’s Pick',
+    desc: 'A soap-free daily cleanser that removes SPF and makeup without stripping the skin barrier.',
+    link: AFF('ceramide foaming cleanser')
+  },
+  {
+    slug: 'ionic-hair-dryer-2200w',
+    name: 'Ionic Hair Dryer 2200W',
+    category: 'hair-styling-tools',
+    emoji: '💨', image: '',
+    g: ['#EDE1F4', '#F9DCE4'],
+    rating: 4.5, reviews: 5120,
+    low: 34.99, high: 49.99,
+    badge: '',
+    desc: 'Fast-dry ionic airflow with three heat settings and a cool shot to lock your style in place.',
+    link: AFF('ionic hair dryer 2200w')
+  },
+  {
+    slug: 'ceramic-hair-straighteners',
+    name: 'Ceramic Plate Hair Straighteners',
+    category: 'hair-styling-tools',
+    emoji: '🔥', image: '',
+    g: ['#F6DCE4', '#EADFF2'],
+    rating: 4.6, reviews: 8903,
+    low: 27.99, high: 39.99,
+    badge: 'Top Rated',
+    desc: 'Floating ceramic plates heat evenly in 30 seconds for sleek results with far less snagging.',
+    link: AFF('ceramic hair straighteners')
+  },
+  {
+    slug: 'round-volumising-brush',
+    name: 'Round Volumising Hot Brush',
+    category: 'hair-styling-tools',
+    emoji: '🪮', image: '',
+    g: ['#FBE6D8', '#F3DCE9'],
+    rating: 4.4, reviews: 1530,
+    low: 19.99, high: 26.99,
+    badge: '',
+    desc: 'A one-step blow-dry brush that smooths and lifts roots for salon-style volume in minutes.',
+    link: AFF('hot air brush volumising')
+  },
+  {
+    slug: 'heatless-curling-ribbon-set',
+    name: 'Heatless Curling Ribbon Set',
+    category: 'heatless-curlers-hair-accessories',
+    emoji: '🎀', image: '',
+    g: ['#FCE9D6', '#F6D6E0'],
+    rating: 4.3, reviews: 6742,
+    low: 6.99, high: 9.99,
+    badge: 'Viral',
+    desc: 'The overnight ribbon curler everyone is talking about — soft, bendy and completely heat-free.',
+    link: AFF('heatless curling ribbon')
+  },
+  {
+    slug: 'silk-scrunchies-6-pack',
+    name: 'Mulberry Silk Scrunchie 6-Pack',
+    category: 'heatless-curlers-hair-accessories',
+    emoji: '✨', image: '',
+    g: ['#F7E2EC', '#EFE3CB'],
+    rating: 4.7, reviews: 2980,
+    low: 7.99, high: 11.99,
+    badge: 'Best Seller',
+    desc: 'Kind to hair, kind to your ponytail — 22-momme silk that reduces creases and breakage.',
+    link: AFF('silk scrunchies')
+  },
+  {
+    slug: 'claw-clip-set-4',
+    name: 'Matte Claw Clip Set (4 Pack)',
+    category: 'heatless-curlers-hair-accessories',
+    emoji: '🦋', image: '',
+    g: ['#EFE1F2', '#F8DDE3'],
+    rating: 4.5, reviews: 1204,
+    low: 5.99, high: 8.99,
+    badge: '',
+    desc: 'Strong-hold claw clips in neutral matte shades — the five-second updo that stays put all day.',
+    link: AFF('claw clips matte')
+  },
+  {
+    slug: 'makeup-brush-set-12',
+    name: '12-Piece Makeup Brush Set',
+    category: 'makeup-brushes-tools',
+    emoji: '🖌️', image: '',
+    g: ['#F8DDE5', '#E8DFF3'],
+    rating: 4.6, reviews: 3655,
+    low: 12.99, high: 17.99,
+    badge: 'Best Seller',
+    desc: 'Ultra-soft synthetic bristles with a full face and eye set, plus a travel case included.',
+    link: AFF('makeup brush set 12 piece')
+  },
+  {
+    slug: 'acrylic-vanity-organiser',
+    name: 'Stackable Acrylic Vanity Organiser',
+    category: 'beauty-storage-organisers',
+    emoji: '🗄️', image: '',
+    g: ['#E7EAF0', '#F5E6D7'],
+    rating: 4.5, reviews: 2110,
+    low: 16.99, high: 24.99,
+    badge: '',
+    desc: 'Clear, stackable drawers that turn a cluttered shelf into a boutique-style beauty display.',
+    link: AFF('acrylic makeup organiser')
+  },
+  {
+    slug: 'travel-makeup-case',
+    name: 'Travel Makeup Case with Dividers',
+    category: 'beauty-storage-organisers',
+    emoji: '🧳', image: '',
+    g: ['#F3E4DA', '#E7EAF0'],
+    rating: 4.4, reviews: 890,
+    low: 13.99, high: 19.99,
+    badge: '',
+    desc: 'Water-resistant, adjustable compartments and a carry handle — built for weekends away.',
+    link: AFF('travel makeup case')
+  }
+];
+
+/* ------------------------------- BLOG ----------------------------------- */
+const POSTS = [
+  {
+    slug: 'heatless-curls-that-actually-last',
+    title: 'Heatless Curls That Actually Last: 5 Accessories Worth Trying',
+    kicker: 'Hair Styling',
+    emoji: '🎀',
+    g: ['#FCE9D6', '#F6D6E0'],
+    date: 'March 2026',
+    readTime: '6 min read',
+    excerpt: 'No heat, no damage, no 6am panic. These are the heatless curling accessories that genuinely hold a curl all day.',
+    meta: 'Want salon-style curls without heat damage? These heatless curling accessories are the ones UK shoppers rate highest on Amazon — plus exactly how to use them so curls last all day.',
+    body: () => `
+      <p class="lead-p">If your For You page has been full of satin ribbons and perfect morning curls, you are not alone. Heatless curling has gone from a niche TikTok hack to a genuine everyday routine — and for good reason. It costs less than a coffee, takes two minutes before bed, and it will not fry your ends.</p>
+      <p>But here is the thing nobody tells you: not all heatless curlers are created equal. Some slip out overnight, some leave a kink where you do not want one, and some simply do not hold a curl past lunchtime. These are the ones worth your money.</p>
+
+      <h2>1. The original ribbon curler</h2>
+      <p>This is the one you have seen everywhere — a soft, bendable silk-covered rod you wrap damp hair around and tie at the top. It works best on <strong>slightly damp</strong> hair with a light mousse or sea-salt spray. Wrap away from your face for outward-facing curls, or towards your face for a softer, more vintage look.</p>
+      ${embed('heatless-curling-ribbon-set')}
+
+      <h2>2. Silk scrunchies (yes, really)</h2>
+      <p>Scrunchies are the unsung hero of heatless styling. Use them to set a low bun or a loose topknot on damp hair and you will wake up with natural, undone waves. Choose mulberry silk over satin polyester — it is kinder to the hair cuticle and creates far fewer creases.</p>
+      ${embed('silk-scrunchies-6-pack')}
+
+      <h2>3. Claw clips for second-day hold</h2>
+      <p>Claw clips are not just for the gym. Twist your hair into a loose French roll, secure it with a clip and let the curls set while you get ready. A good clip holds thick hair without pulling — look for a matte finish and a strong spring.</p>
+      ${embed('claw-clip-set-4')}
+
+      <h2>Three rules for curls that survive the day</h2>
+      <ul>
+        <li><strong>Start damp, never soaking.</strong> Wet hair will not set; dry hair will not hold.</li>
+        <li><strong>Finish with a light hold spray</strong> and a drop of serum on the ends only.</li>
+        <li><strong>Take it out slowly.</strong> Unwind the ribbon rather than pulling it straight off.</li>
+      </ul>
+
+      <h2>The verdict</h2>
+      <p>If you only buy one thing, make it the ribbon curler — it is the cheapest, the most forgiving and the one most likely to become a habit. Pair it with a silk scrunchie for the nights you cannot be bothered, and you have a complete heat-free routine for under £20.</p>
+    `
+  },
+  {
+    slug: 'affordable-skincare-routine-under-15',
+    title: 'The £15 Skincare Routine That Actually Works',
+    kicker: 'Skincare',
+    emoji: '🧴',
+    g: ['#FBE0E7', '#F6DEC4'],
+    date: 'March 2026',
+    readTime: '7 min read',
+    excerpt: 'Three products. Under fifteen pounds. A simple routine that beats a ten-step shelf full of half-used bottles.',
+    meta: 'A simple, dermatologist-friendly skincare routine built from three affordable Amazon UK products — cleanser, serum and moisturiser — for under £15 total.',
+    body: () => `
+      <p class="lead-p">Skincare does not need ten steps. It needs consistency, a gentle cleanser, one active ingredient and a moisturiser you will actually use. Everything else is a bonus.</p>
+      <p>Here is the three-product routine we recommend to anyone starting from scratch — or starting over after a shelf full of products that did not work.</p>
+
+      <h2>Step 1: A cleanser that does not strip</h2>
+      <p>If your skin feels tight after washing, your cleanser is too harsh. A ceramide-based foaming cleanser removes sunscreen and makeup while leaving the barrier intact. Use it morning and night, and double cleanse only on makeup days.</p>
+      ${embed('ceramide-foaming-cleanser')}
+
+      <h2>Step 2: One active — vitamin C</h2>
+      <p>If you want brightness, evening out of tone and a little antioxidant protection, vitamin C is the best-value active in skincare. Apply it in the morning to clean skin, before moisturiser and SPF. Start with three days a week if your skin is sensitive.</p>
+      ${embed('vitamin-c-brightening-serum')}
+
+      <h2>Step 3: Moisture to lock it all in</h2>
+      <p>Hyaluronic acid pulls water into the skin; a light cream seals it there. Apply to slightly damp skin and you will need far less product to feel comfortable.</p>
+      ${embed('hyaluronic-hydrating-cream')}
+
+      <h2>What to skip</h2>
+      <ul>
+        <li>Anything with a scrub bead — physical exfoliants are rarely worth it.</li>
+        <li>Products you cannot use daily. Consistency beats intensity.</li>
+        <li>Buying five actives at once. Introduce one, wait three weeks, then decide.</li>
+      </ul>
+      <p>Total cost of this routine: around £31 for all three, and closer to £15 if you start with the cleanser and moisturiser and add the serum next month. That is a full routine for less than one luxury serum.</p>
+    `
+  },
+  {
+    slug: 'vanity-storage-ideas',
+    title: 'Vanity Storage Ideas: Organise Your Beauty Shelf Like a Pro',
+    kicker: 'Organisation',
+    emoji: '🗄️',
+    g: ['#E7EAF0', '#F5E6D7'],
+    date: 'February 2026',
+    readTime: '5 min read',
+    excerpt: 'Clear acrylic, stackable drawers and a travel case that finally ends the bathroom-bag chaos.',
+    meta: 'Simple vanity storage ideas and affordable Amazon UK organisers to declutter your beauty shelf — acrylic drawers, stackable trays and travel cases that actually fit.',
+    body: () => `
+      <p class="lead-p">A cluttered vanity is not just messy — it means you rebuy things you already own and never reach for the products at the back. Ten minutes of organising saves you money every month.</p>
+
+      <h2>Rule one: go vertical, not wide</h2>
+      <p>Most shelves waste the top half of the space. Stackable acrylic drawers let you build upward and keep every layer visible. Clear is best — you use what you can see.</p>
+      ${embed('acrylic-vanity-organiser')}
+
+      <h2>Rule two: group by step, not by brand</h2>
+      <p>Put cleansers together, serums together, styling tools together. When your routine is laid out in order, you stop rummaging and you stop skipping steps.</p>
+
+      <h2>Rule three: give travel its own home</h2>
+      <p>A dedicated travel case with dividers means you never empty your whole vanity into a plastic bag again. Keep it packed with minis and you are always ready for a weekend away.</p>
+      ${embed('travel-makeup-case')}
+
+      <h2>The five-minute reset</h2>
+      <ul>
+        <li>Bin anything expired or half-empty and unloved.</li>
+        <li>Wipe every surface before you put anything back.</li>
+        <li>Put your three most-used products at eye level.</li>
+        <li>Keep one small tray for “currently testing” so it does not spread.</li>
+      </ul>
+      <p>Do this once a month and your shelf stays a display, not a drawer of shame.</p>
+    `
+  }
+];
+
+/* =========================================================================
+   HELPERS
+   ========================================================================= */
+const $  = (sel) => document.querySelector(sel);
+const byId = (slug) => PRODUCTS.find(p => p.slug === slug);
+const catById = (slug) => CATEGORIES.find(c => c.slug === slug);
+
+function money(n){ return '£' + n.toFixed(2); }
+
+function stars(rating){
+  const rounded = Math.round(rating);
+  let out = '';
+  for (let i = 1; i <= 5; i++) out += (i <= rounded ? '★' : '☆');
+  return out;
+}
+
+function priceText(p){
+  return p.low === p.high
+    ? money(p.low)
+    : money(p.low) + ' <span>– ' + money(p.high) + '</span>';
+}
+
+function setMeta(title, description){
+  document.title = title;
+  let d = document.querySelector('meta[name="description"]');
+  if (!d){ d = document.createElement('meta'); d.setAttribute('name','description'); document.head.appendChild(d); }
+  d.setAttribute('content', description);
+  let ogt = document.querySelector('meta[property="og:title"]');
+  if (ogt) ogt.setAttribute('content', title);
+  let ogd = document.querySelector('meta[property="og:description"]');
+  if (ogd) ogd.setAttribute('content', description);
+}
+
+/* =========================================================================
+   COMPONENTS
+   ========================================================================= */
+function productCard(p, opts){
+  opts = opts || {};
+  const cat = catById(p.category);
+  // AUTOMATIC TAG APPLIED HERE
+  const finalLink = getAffiliateLink(p.link);
+  
+  return `
+  <article class="p-card ${opts.bold ? 'p-card--bold' : ''}">
+    <div class="p-media" style="--g1:${p.g[0]};--g2:${p.g[1]}">
+      ${p.badge ? `<span class="p-badge">${p.badge}</span>` : ''}
+      ${p.image ? `<img src="${p.image}" alt="${p.name}" loading="lazy">` : ''}
+      <span class="p-emoji" aria-hidden="true">${p.emoji}</span>
+    </div>
+    <div class="p-body">
+      <span class="p-cat">${cat ? cat.name : 'Beauty'}</span>
+      <h3>${p.name}</h3>
+      <p class="p-desc">${p.desc}</p>
+      <div class="p-rating">
+        <span class="stars" aria-hidden="true">${stars(p.rating)}</span>
+        <span class="p-reviews">${p.rating.toFixed(1)} · ${p.reviews.toLocaleString('en-GB')} reviews</span>
+      </div>
+      <div class="p-price">${priceText(p)}</div>
+      <a class="btn-amazon" href="${finalLink}" target="_blank" rel="nofollow sponsored noopener">View on Amazon →</a>
+    </div>
+  </article>`;
+}
+
+function categoryTile(c){
+  return `
+  <a class="cat-tile" href="#/category/${c.slug}" style="--g1:${c.g[0]};--g2:${c.g[1]}">
+    <span class="cat-emoji" aria-hidden="true">${c.emoji}</span>
+    <h3>${c.name}</h3>
+    <p>${c.blurb}</p>
+    <span class="cat-link">Shop the picks →</span>
+  </a>`;
+}
+
+function blogCard(post){
+  return `
+  <a class="post-card" href="#/blog/${post.slug}">
+    <div class="post-media" style="--g1:${post.g[0]};--g2:${post.g[1]}">
+      <span aria-hidden="true">${post.emoji}</span>
+    </div>
+    <div class="post-body">
+      <span class="kicker">${post.kicker}</span>
+      <h3>${post.title}</h3>
+      <p>${post.excerpt}</p>
+      <span class="read">Read the guide →</span>
+    </div>
+  </a>`;
+}
+
+/* product card embedded inside blog articles */
+function embed(slug){
+  const p = byId(slug);
+  if (!p) return '';
+  return `<div class="post-embed">${productCard(p)}</div>`;
+}
+
+/* =========================================================================
+   VIEWS
+   ========================================================================= */
+function viewHome(){
+  setMeta(
+    'Dansy Mart | Beauty Products & Hair Styling Accessories on Amazon UK',
+    'Discover hand-picked beauty products and hair styling accessories on Amazon UK — skincare, heatless curlers, styling tools and vanity storage at premium-yet-affordable prices.'
+  );
+
+  const featured = PRODUCTS.slice(0, 6);
+  const topPicks = ['ceramic-hair-straighteners', 'vitamin-c-brightening-serum', 'heatless-curling-ribbon-set']
+    .map(byId).filter(Boolean);
+
+  return `
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="pill">✨ Curated on Amazon UK</span>
+        <h1>Discover Your <em>Beauty</em> Essentials</h1>
+        <p class="lead">Explore the best beauty and hair styling products on Amazon UK, carefully selected to help you look and feel your best.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#/categories">Shop Best Picks</a>
+          <a class="btn btn-ghost" href="#/blog">Read the Guides</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>150+</strong><small>Products tested</small></div>
+          <div><strong>4.6★</strong><small>Average rating</small></div>
+          <div><strong>UK</strong><small>Amazon picks</small></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="art-main"><span class="art-emoji" aria-hidden="true">💄</span></div>
+        <div class="art-chip chip-1"><span aria-hidden="true">🎀</span><div><strong>Heatless curls</strong><small>from £6.99</small></div></div>
+        <div class="art-chip chip-2"><span aria-hidden="true">⭐</span><div><strong>4.7 average</strong><small>2,000+ reviews</small></div></div>
+        <div class="art-chip chip-3"><span aria-hidden="true">🧴</span><div><strong>Glow serums</strong><small>under £15</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="trust">
+    <div class="container trust-grid">
+      <div class="trust-item"><span class="ti-ico" aria-hidden="true">✅</span><div><strong>Hand-picked &amp; tested</strong><small>Only products we would buy again</small></div></div>
+      <div class="trust-item"><span class="ti-ico" aria-hidden="true">🇬🇧</span><div><strong>Amazon UK favourites</strong><small>Fast delivery, easy returns</small></div></div>
+      <div class="trust-item"><span class="ti-ico" aria-hidden="true">🔄</span><div><strong>Updated monthly</strong><small>Fresh picks and honest reviews</small></div></div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Featured Products</span>
+        <h2>Trending beauty picks this week</h2>
+        <p>A tight edit of the skincare, hair tools and accessories getting the best reviews on Amazon UK right now.</p>
+      </div>
+      <div class="grid grid-3">
+        ${featured.map(p => productCard(p)).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- BEST PICKS BY CATEGORY -->
+  <section class="section section--tint">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Best Picks By Category</span>
+        <h2>Shop by category</h2>
+        <p>Browse the edit by what you actually need — skincare, styling tools, heatless accessories or storage.</p>
+      </div>
+      <div class="cat-grid">
+        ${CATEGORIES.map(categoryTile).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- TOP PICKS THIS MONTH -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Top Picks This Month</span>
+        <h2>Our three favourites</h2>
+        <p>If you only buy three things this month, make it these.</p>
+      </div>
+      <div class="grid grid-3">
+        ${topPicks.map(p => productCard(p, { bold: true })).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG PREVIEW -->
+  <section class="section section--tint">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">From The Blog</span>
+        <h2>Guides, routines &amp; honest reviews</h2>
+        <p>Long-form buying guides for the products people actually ask about.</p>
+      </div>
+      <div class="grid grid-3">
+        ${POSTS.map(blogCard).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-strip">
+    <div class="container">
+      <div class="cta-box">
+        <h2>New picks added every month</h2>
+        <p>We test the trending beauty and hair products on Amazon UK so you do not have to. Start with our best sellers.</p>
+        <a class="btn" href="#/best-sellers">See Best Sellers →</a>
+      </div>
+    </div>
+  </section>`;
+}
+
+function viewCategories(){
+  setMeta(
+    'Beauty & Hair Categories | Dansy Mart Amazon UK Picks',
+    'Browse beauty product and hair styling accessory categories — skincare essentials, styling tools, heatless curlers, makeup brushes and beauty storage.'
+  );
+  return `
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow">Categories</span>
+      <h1>Best Picks By Category</h1>
+      <p>Every product on Dansy Mart sits inside one of these five edits. Pick your shelf and start browsing.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="cat-grid">${CATEGORIES.map(categoryTile).join('')}</div>
+    </div>
+  </section>`;
+}
+
+function viewCategory(slug){
+  const cat = catById(slug);
+  if (!cat) return viewNotFound();
+  const items = PRODUCTS.filter(p => p.category === slug);
+  setMeta(
+    `${cat.name} | Best Amazon UK Picks — Dansy Mart`,
+    `${cat.blurb} Shop tested and trusted ${cat.name.toLowerCase()} on Amazon UK, hand-picked by Dansy Mart.`
+  );
+  return `
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow">Category</span>
+      <h1>${cat.name}</h1>
+      <p>${cat.blurb} Every pick below is rated 4.3★ or higher on Amazon UK.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      ${items.length
+        ? `<div class="grid grid-3">${items.map(p => productCard(p)).join('')}</div>`
+        : `<p class="empty-note">New picks are being added to this category soon.</p>`}
+    </div>
+  </section>`;
+}
+
+function viewBestSellers(){
+  setMeta(
+    'Best Sellers | Top-Rated Beauty & Hair Products on Amazon UK — Dansy Mart',
+    'The best-selling beauty products and hair styling accessories on Amazon UK, ranked by review volume and rating. Tested and trusted picks.'
+  );
+  const items = [...PRODUCTS].sort((a, b) => b.reviews - a.reviews);
+  return `
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow">Best Sellers</span>
+      <h1>Best Sellers</h1>
+      <p>Ranked by the number of Amazon UK reviews — these are the beauty and hair products shoppers keep coming back for.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3">${items.map(p => productCard(p)).join('')}</div>
+    </div>
+  </section>`;
+}
+
+function viewBudgetPicks(){
+  setMeta(
+    'Budget Picks Under £20 | Affordable Beauty & Hair Products — Dansy Mart',
+    'The best affordable beauty products and hair styling accessories on Amazon UK — every budget pick is under £20 and still rated 4.3★ or higher.'
+  );
+  const items = PRODUCTS.filter(p => p.low <= 20).sort((a, b) => a.low - b.low);
+  return `
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow">Budget Picks</span>
+      <h1>Budget Picks Under £20</h1>
+      <p>Great beauty does not have to be expensive. Every product here starts under £20 — and most are rated 4.4★ or above.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3">${items.map(p => productCard(p)).join('')}</div>
+    </div>
+  </section>`;
+}
+
+function viewBlog(){
+  setMeta(
+    'Beauty & Hair Blog | Reviews, Routines & Buying Guides — Dansy Mart',
+    'Affiliate beauty reviews and buying guides for Amazon UK hair styling accessories and skincare — routines, roundups and honest product tests.'
+  );
+  return `
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow">The Blog</span>
+      <h1>Guides, routines &amp; honest reviews</h1>
+      <p>Long-form buying guides for the beauty and hair products people actually search for — with every product linked straight to Amazon UK.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3">${POSTS.map(blogCard).join('')}</div>
+    </div>
+  </section>`;
+}
+
+function viewPost(slug){
+  const post = POSTS.find(p => p.slug === slug);
+  if (!post) return viewNotFound();
+
+  setMeta(`${post.title} | Dansy Mart`, post.meta);
+
+  const shareUrl = location.origin + location.pathname + '#/blog/' + post.slug;
+  const pinHref = 'https://pinterest.com/pin/create/button/?url=' +
+    encodeURIComponent(shareUrl) + '&description=' + encodeURIComponent(post.meta);
+
+  return `
+  <article class="section">
+    <div class="container">
+      <div class="post-hero" style="--g1:${post.g[0]};--g2:${post.g[1]}">
+        <span aria-hidden="true">${post.emoji}</span>
+      </div>
+
+      <header class="post-head">
+        <span class="kicker">${post.kicker}</span>
+        <h1>${post.title}</h1>
+        <div class="post-meta">
+          <span>${post.date}</span>
+          <span>${post.readTime}</span>
+          <span>Dansy Mart Edit</span>
+        </div>
+      </header>
+
+      <div class="prose">
+        ${post.body()}
+      </div>
+
+      <div class="pin-row">
+        <a class="back-link" href="#/blog">← All articles</a>
+        <a class="pin-btn" href="${pinHref}" target="_blank" rel="noopener">
+          <span aria-hidden="true">📌</span> Save this pin
+        </a>
+      </div>
+    </div>
+  </article>`;
+}
+
+function viewAbout(){
+  setMeta(
+    'About Dansy Mart | Trusted Beauty & Hair Styling Picks on Amazon UK',
+    'Dansy Mart recommends only tested and trusted beauty products and hair styling accessories from Amazon UK. Learn how we choose what makes the edit.'
+  );
+  return `
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow">About</span>
+      <h1>About Dansy Mart</h1>
+      <p>A small, independent edit of beauty and hair styling products from Amazon UK — no filler, no fads, just things worth buying.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="prose">
+        <p class="lead-p">Hi — and welcome to Dansy Mart.</p>
+        <p>Dansy Mart is a beauty edit built on one simple rule: we only recommend beauty products and hair styling accessories that have been tested and trusted. If we would not buy it again ourselves, it does not make the page.</p>
+        <p>Every product you see here links straight to Amazon UK, so you can check the current price, read the live reviews and order in a couple of clicks. We are an Amazon Associate, which means we earn a small commission on qualifying purchases at no extra cost to you — that is what keeps the site running.</p>
+
+        <h2>How we choose products</h2>
+        <ul>
+          <li><strong>Real review volume.</strong> A product needs a meaningful number of reviews and a 4.3★ average or above.</li>
+          <li><strong>Value for money.</strong> Premium feel, affordable price. We check the price range before we feature anything.</li>
+          <li><strong>Repeat use.</strong> Would this still be in your routine in three months? If not, it is out.</li>
+        </ul>
+
+        <h2>What we cover</h2>
+        <p>Skincare and beauty essentials, hair styling tools, heatless curlers and hair accessories, makeup and brushes, and beauty storage and organisers. If it helps you look and feel your best without wasting money, we want to write about it.</p>
+
+        <h2>Say hello</h2>
+        <p>Spotted a product you think belongs on Dansy Mart? We would love to hear about it. This is a placeholder bio section — swap in your own story, contact email and social links here.</p>
+      </div>
+    </div>
+  </section>`;
+}
+
+function viewNotFound(){
+  setMeta('Page not found | Dansy Mart', 'That page could not be found. Browse beauty and hair styling picks on Dansy Mart.');
+  return `
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow">404</span>
+      <h1>We could not find that page</h1>
+      <p>It may have moved. Try the categories or head back to the homepage.</p>
+      <p style="margin-top:22px"><a class="btn btn-primary" href="#/home">Back to home</a></p>
+    </div>
+  </section>`;
+}
+
+/* =========================================================================
+   ROUTER
+   ========================================================================= */
+function setActiveNav(page){
+  const map = {
+    home: '#/home',
+    categories: '#/categories',
+    category: '#/categories',
+    'best-sellers': '#/best-sellers',
+    'budget-picks': '#/budget-picks',
+    blog: '#/blog',
+    post: '#/blog',
+    about: '#/about'
+  };
+  const target = map[page] || '#/home';
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === target);
+  });
+}
+
+function router(){
+  const raw = location.hash.replace(/^#\/?/, '');
+  const parts = raw.split('/').filter(Boolean);
+  const page = parts[0] || 'home';
+  const slug = parts[1];
+
+  let html = '';
+  let navKey = page;
+
+  switch (page){
+    case 'home':         html = viewHome(); break;
+    case 'categories':   html = viewCategories(); break;
+    case 'category':     html = viewCategory(slug); break;
+    case 'best-sellers': html = viewBestSellers(); break;
+    case 'budget-picks': html = viewBudgetPicks(); break;
+    case 'blog':
+      if (slug){ html = viewPost(slug); navKey = 'post'; }
+      else { html = viewBlog(); }
+      break;
+    case 'about':        html = viewAbout(); break;
+    default:             html = viewNotFound(); navKey = 'home';
+  }
+
+  $('#app').innerHTML = html;
+  setActiveNav(navKey);
+
+  // close mobile menu
+  $('#navLinks').classList.remove('open');
+  $('#burger').setAttribute('aria-expanded', 'false');
+
+  window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+}
+
+/* =========================================================================
+   INIT
+   ========================================================================= */
+document.addEventListener('DOMContentLoaded', () => {
+  $('#year').textContent = new Date().getFullYear();
+
+  // footer category links
+  $('#footerCats').innerHTML = CATEGORIES
+    .map(c => `<a href="#/category/${c.slug}">${c.name}</a>`)
+    .join('');
+
+  // mobile menu
+  $('#burger').addEventListener('click', () => {
+    const open = $('#navLinks').classList.toggle('open');
+    $('#burger').setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  window.addEventListener('hashchange', router);
+  router();
+});
+</script>
+</body>
+</html>
