@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "products"
+    label: "Products"
+    files:
+      - name: "products"
+        label: "Product List"
+        file: "products.json"
+        fields:
+          - label: "Products"
+            name: "products"
+            widget: "list"
+            fields:
+              - {label: "Product Name", name: "name", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Price (e.g. 12.99)", name: "price", widget: "string"}
+              - {label: "Image", name: "image", widget: "image", required: false}
+              - {label: "Amazon Link", name: "link", widget: "string"}
