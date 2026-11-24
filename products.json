@@ -34,6 +34,12 @@
       "price": "10.99",
       "image": "/images/image-1-4.jpg",
       "link": "https://link.amazon/B00hJAVSG"
+    },
+    {
+      "name": "Kérastase Elixir Ultime Originale Hair Oil, Radiant Shine & Softness, 75ml",
+      "price": "40.95",
+      "image": "/images/image-1-5.jpg",
+      "link": "https://link.amazon/B0iv1gcTj"
     }
   ]
 }
