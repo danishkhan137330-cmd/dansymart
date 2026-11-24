@@ -31,7 +31,8 @@
       <a href="#/blog">Blog</a>
       <a href="#/about">About</a>
       <a href="#/privacy" style="font-size:13px;">Privacy Policy</a>
-      <a href="/admin" style="color:var(--rose); border:1px solid var(--rose); margin-left:10px;">Admin Login</a>
+      <!-- YAHAN TARGET=_BLANK ADD KAR DIYA HAI -->
+      <a href="/admin" target="_blank" style="color:var(--rose); border:1px solid var(--rose); margin-left:10px;">Admin Login</a>
     </nav>
     <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
       <span></span>
@@ -59,7 +60,8 @@
       <a href="#/blog">Blog</a>
       <a href="#/about">About</a>
       <a href="#/privacy">Privacy Policy</a>
-      <a href="/admin" style="color:var(--gold); font-weight:bold; margin-top:10px;">⚙️ Admin Login</a>
+      <!-- YAHAN BHI TARGET=_BLANK ADD KAR DIYA HAI -->
+      <a href="/admin" target="_blank" style="color:var(--gold); font-weight:bold; margin-top:10px;">⚙️ Admin Login</a>
     </div>
   </div>
   <div class="container footer-bottom">
@@ -170,6 +172,9 @@ function viewBlog(){ return `<section class="page-head"><div class="container"><
 function viewPost(slug){ const post = POSTS.find(p=>p.slug===slug) || POSTS[0]; return `<section class="section"><div class="container"><div class="prose"><h1>${post.title}</h1>${post.body}</div></div></section>`; }
 
 function router(){
+  // YEH NAYI LINE HAI: Agar koi /admin par jaye toh website ka code usay overwrite na kare
+  if (window.location.pathname.includes('/admin')) return;
+
   if (location.hash.includes('recovery_token') || location.hash.includes('invite_token') || location.hash.includes('confirmation_token')) return;
   const raw = location.hash.replace(/^#\/?/, '') || 'home';
   let html = '';
