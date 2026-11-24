@@ -1,11 +1,198 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dansy Mart Admin</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dansy Mart | Beauty Products &amp; Hair Styling Accessories on Amazon UK</title>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FBF7F0;--cream-deep:#F6EEE3;--white:#FFFFFF;--ink:#221C1F;--muted:#6E6470;--rose:#C24E6D;--rose-bright:#E4728F;--rose-soft:#FBE4EA;--gold:#C7A76A;--gold-soft:#F0E3C8;--line:rgba(34,28,31,.10);--radius:22px;--shadow:0 22px 48px -30px rgba(120,50,80,.55);--shadow-soft:0 10px 26px -20px rgba(120,50,80,.6);--max:1180px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;height:auto}a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;line-height:1.15;margin:0;letter-spacing:-.015em;font-weight:700}
+p{margin:0}ul{margin:0;padding:0;list-style:none}button{font-family:inherit}
+.container{width:100%;max-width:var(--max);margin:0 auto;padding:0 22px}
+.section{padding:74px 0}.section--tint{background:linear-gradient(180deg,var(--cream) 0%,var(--cream-deep) 100%)}
+.section-head{max-width:660px;margin:0 0 40px}.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);margin-bottom:12px}
+.section-head h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin-bottom:12px}
+.disclosure-bar{background:linear-gradient(90deg,var(--rose) 0%,var(--rose-bright) 55%,var(--gold) 100%);color:#fff;font-size:12.5px;font-weight:700;text-align:center;padding:9px 16px}
+.site-header{position:sticky;top:0;z-index:60;background:rgba(251,247,240,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;height:74px;position:relative}
+.logo{display:flex;align-items:center;gap:9px;font-family:'Playfair Display',serif;font-size:23px;font-weight:800}
+.logo .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(140deg,var(--rose),var(--gold))}
+.logo em{font-style:normal;color:var(--rose)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{padding:9px 15px;border-radius:999px;font-size:14.5px;font-weight:600;color:#4C4249}
+.nav-links a:hover,.nav-links a.active{background:var(--rose-soft);color:var(--rose)}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1.5px solid var(--line);background:#fff;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 26px;border-radius:999px;font-weight:700;font-size:15px;border:0;cursor:pointer}
+.btn-primary{background:linear-gradient(100deg,var(--rose),var(--rose-bright));color:#fff}
+.btn-amazon{display:flex;width:100%;align-items:center;justify-content:center;margin-top:auto;padding:13px 18px;border-radius:999px;background:linear-gradient(100deg,var(--rose),var(--rose-bright));color:#fff;font-weight:800;font-size:14px;box-shadow:0 14px 26px -16px rgba(194,78,109,.95)}
+.hero{padding:64px 0 78px;text-align:center;background:radial-gradient(900px 420px at 88% -10%,rgba(228,114,143,.20),transparent 70%),var(--cream)}
+.hero h1{font-size:clamp(2.3rem,5.4vw,4rem);margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--rose)}
+.hero .lead{font-size:1.09rem;color:var(--muted);max-width:52ch;margin:0 auto 30px}
+.grid{display:grid;gap:26px}.grid-3{grid-template-columns:repeat(3,1fr)}
+.p-card{display:flex;flex-direction:column;background:var(--white);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-soft);transition:transform .22s}
+.p-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.p-media{position:relative;aspect-ratio:4/3;display:grid;place-items:center;background:#F8F8F8;overflow:hidden}
+.p-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+.p-emoji{font-size:56px;z-index:1}
+.p-body{display:flex;flex-direction:column;gap:10px;padding:20px;flex:1}
+.p-cat{font-size:11px;font-weight:800;text-transform:uppercase;color:var(--gold)}
+.p-body h3{font-size:1.09rem;line-height:1.28}
+.p-price{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700}
+.p-desc{font-size:13.8px;color:var(--muted);line-height:1.55;flex:1}
+.prose{max-width:740px;margin:0 auto;font-size:1.05rem;line-height:1.78;color:#3B3238}
+.prose h2{font-size:1.5rem;margin:38px 0 14px}
+.site-footer{background:#221C1F;color:#DED5DA;padding:40px 0;text-align:center;margin-top:40px}
+.site-footer a{color:var(--gold);text-decoration:underline}
+@media(max-width:768px){.grid-3{grid-template-columns:1fr}.nav-links{display:none}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:74px;left:0;right:0;background:var(--cream);padding:20px}.burger{display:block}}
+</style>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<div class="disclosure-bar">As an Amazon Associate I earn from qualifying purchases.</div>
+<header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="#/home"><span class="dot"></span>Dansy<em>Mart</em></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#/home">Home</a>
+      <a href="#/best-sellers">Best Sellers</a>
+      <a href="#/budget-picks">Budget Picks</a>
+      <a href="#/about">About</a>
+      <a href="#/privacy">Privacy Policy</a>
+      <a href="/admin" style="color:var(--rose);border:1px solid var(--rose);margin-left:10px;">Admin Login</a>
+    </nav>
+    <button class="burger" id="burger"><span>☰</span></button>
+  </div>
+</header>
+<main id="app"></main>
+<footer class="site-footer">
+  <div class="container">
+    <p style="color:var(--gold);font-weight:700;margin-bottom:10px;">As an Amazon Associate I earn from qualifying purchases.</p>
+    <p>© <span id="year"></span> Dansy Mart. | <a href="#/privacy">Privacy Policy</a></p>
+  </div>
+</footer>
+<script>
+const AMAZON_TAG = 'danish08ee-21';
+function getAffiliateLink(url) {
+  if (!url) return '#'; if (url.includes('tag=')) return url;
+  return url + (url.includes('?') ? '&' : '?') + 'tag=' + AMAZON_TAG;
+}
+
+// Default Data
+let PRODUCTS = [];
+let SETTINGS = { hero_heading: "Discover Your Beauty Essentials", hero_subheading: "Explore the best beauty and hair styling products on Amazon UK.", about_text: "Welcome to Dansy Mart." };
+let PRIVACY = { title: "Privacy Policy", content: "Loading..." };
+
+function money(n){ return '£' + parseFloat(n).toFixed(2); }
+function stars(){ return '★★★★★'; }
+
+function productCard(p) {
+  // PRICE FIX: Price ko clean karke parse karna
+  let cleanPrice = String(p.price || '0').replace(/[^0-9.]/g, '');
+  let finalPrice = parseFloat(cleanPrice) || 0;
+  
+  return `
+  <article class="p-card">
+    <div class="p-media">
+      ${p.image ? `<img src="${p.image}" alt="${p.name}" loading="lazy">` : `<span class="p-emoji">🛍️</span>`}
+    </div>
+    <div class="p-body">
+      <span class="p-cat">Beauty Pick</span>
+      <h3>${p.name}</h3>
+      <p class="p-desc">${p.description || ''}</p>
+      <div class="p-price">${money(finalPrice)}</div>
+      <div style="color:var(--gold);font-size:12px;margin-bottom:5px;">${stars()} (${p.reviews || 150} reviews)</div>
+      <a class="btn-amazon" href="${getAffiliateLink(p.link)}" target="_blank" rel="nofollow sponsored noopener">View on Amazon →</a>
+    </div>
+  </article>`;
+}
+
+function viewHome(){
+  return `
+  <section class="hero">
+    <div class="container">
+      <h1>${SETTINGS.hero_heading.replace("Beauty", "<em>Beauty</em>")}</h1>
+      <p class="lead">${SETTINGS.hero_subheading}</p>
+      <a class="btn btn-primary" href="#/best-sellers">Shop Best Sellers</a>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section-head center"><span class="eyebrow">Featured Products</span><h2>Trending beauty picks</h2></div>
+      <div class="grid grid-3">${PRODUCTS.map(p => productCard(p)).join('')}</div>
+    </div>
+  </section>`;
+}
+
+function viewAbout(){
+  return `
+  <section class="section" style="min-height:60vh;">
+    <div class="container">
+      <div class="prose">
+        <h1 style="margin-bottom:20px;">About Dansy Mart</h1>
+        <p>${SETTINGS.about_text.replace(/\n/g, '<br>')}</p>
+      </div>
+    </div>
+  </section>`;
+}
+
+function viewPrivacy(){
+  return `
+  <section class="section" style="min-height:60vh;">
+    <div class="container">
+      <div class="prose">
+        <h1 style="margin-bottom:20px;">${PRIVACY.title}</h1>
+        <p>${PRIVACY.content.replace(/\n/g, '<br>')}</p>
+      </div>
+    </div>
+  </section>`;
+}
+
+function viewList(){
+  return `<section class="section"><div class="container"><div class="section-head"><h2>All Products</h2></div><div class="grid grid-3">${PRODUCTS.map(p => productCard(p)).join('')}</div></div></section>`;
+}
+
+function router(){
+  if (location.hash.includes('recovery_token') || location.hash.includes('invite_token') || location.hash.includes('confirmation_token')) return;
+  const raw = location.hash.replace(/^#\/?/, '') || 'home';
+  let html = '';
+  
+  if(raw === 'home') html = viewHome();
+  else if(raw === 'best-sellers' || raw === 'budget-picks') html = viewList();
+  else if(raw === 'about') html = viewAbout();
+  else if(raw === 'privacy') html = viewPrivacy();
+  else html = viewHome();
+  
+  document.getElementById('app').innerHTML = html;
+  document.getElementById('navLinks').classList.remove('open');
+  window.scrollTo(0, 0);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('burger').onclick = () => document.getElementById('navLinks').classList.toggle('open');
+
+  // Load All Data Simultaneously
+  Promise.all([
+    fetch('/products.json').then(r => r.json()).catch(() => ({products: []})),
+    fetch('/settings.json').then(r => r.json()).catch(() => SETTINGS),
+    fetch('/privacy.json').then(r => r.json()).catch(() => PRIVACY)
+  ]).then(([prodData, setData, privData]) => {
+    if(prodData.products) PRODUCTS = prodData.products;
+    if(setData.hero_heading) SETTINGS = setData;
+    if(privData.content) PRIVACY = privData;
+    
+    window.addEventListener('hashchange', router);
+    router();
+  });
+});
+</script>
 </body>
 </html>
