@@ -1,0 +1,33 @@
+media: images
+content:
+  - name: products
+    label: Products
+    type: file
+    path: products.json
+    fields:
+      - name: products
+        label: Product List
+        type: object
+        list: true
+        fields:
+          - {name: name, label: Product Name, type: string}
+          - {name: description, label: Description, type: string}
+          - {name: price, label: Price (e.g. 12.99), type: string}
+          - {name: image, label: Image, type: image}
+          - {name: link, label: Amazon Link, type: string}
+  - name: settings
+    label: Website Settings
+    type: file
+    path: settings.json
+    fields:
+      - {name: hero_heading, label: Hero Heading, type: string}
+      - {name: hero_subheading, label: Hero Subheading, type: string}
+      - {name: hero_image, label: Hero Front Image, type: image}
+      - {name: about_text, label: About Text, type: string}
+  - name: privacy
+    label: Privacy Policy
+    type: file
+    path: privacy.json
+    fields:
+      - {name: title, label: Title, type: string}
+      - {name: content, label: Content, type: string}
