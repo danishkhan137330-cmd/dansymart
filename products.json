@@ -1,11 +1,18 @@
 {
   "products": [
     {
-      "link": "https://link.amazon/B0akq3IZN",
-      "image": "/images/image-1.jpg",
       "name": "OLAPLEX N°.7 Bonding Hair Oil | High Shine, 30 mL",
+      "description": "A highly concentrated, weightless styling oil for every hair type. Just 2-3 drops boost shine and softness instantly, strengthen to reduce breakage, and control frizz and flyaways for sleek, healthy-looking styles.",
       "price": "16.98",
-      "description": "A highly concentrated, weightless styling oil for every hair type. Just 2-3 drops boost shine and softness instantly, strengthen to reduce breakage, and control frizz and flyaways for sleek, healthy-looking styles."
+      "image": "/images/image-1.jpg",
+      "link": "https://link.amazon/B0akq3IZN"
+    },
+    {
+      "name": "COLOR WOW Dream Coat Supernatural Spray. ",
+      "description": "Dream Coat is an award-winning, weatherproofing frizz treatment that envelops hair in an invisible anti-humidity, anti-static shield to transform texture, reduce frizz, and boost shin",
+      "price": "18.83",
+      "image": "/images/image-1-1.jpg",
+      "link": "https://link.amazon/B0cAGecS0"
     }
   ]
 }
