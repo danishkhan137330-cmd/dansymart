@@ -19,7 +19,7 @@ collections:
             fields:
               - {label: "Product Name", name: "name", widget: "string"}
               - {label: "Description", name: "description", widget: "text"}
-              - {label: "Price (Sirf number likhein, jaise 12.99)", name: "price", widget: "string"}
+              - {label: "Price (Sirf number, e.g. 12.99)", name: "price", widget: "string"}
               - {label: "Image", name: "image", widget: "image", required: false}
               - {label: "Amazon Link", name: "link", widget: "string"}
 
@@ -27,11 +27,12 @@ collections:
     label: "Website Settings"
     files:
       - name: "settings"
-        label: "Homepage & About Text"
+        label: "Homepage Text & Image"
         file: "settings.json"
         fields:
           - {label: "Hero Heading", name: "hero_heading", widget: "string", default: "Discover Your Beauty Essentials"}
           - {label: "Hero Subheading", name: "hero_subheading", widget: "text", default: "Explore the best beauty and hair styling products on Amazon UK."}
+          - {label: "Hero Front Image (Optional)", name: "hero_image", widget: "image", required: false}
           - {label: "About Page Text", name: "about_text", widget: "text", default: "Welcome to Dansy Mart. We recommend only tested and trusted beauty products."}
 
   - name: "pages"
@@ -42,4 +43,4 @@ collections:
         file: "privacy.json"
         fields:
           - {label: "Title", name: "title", widget: "string", default: "Privacy Policy"}
-          - {label: "Content", name: "content", widget: "markdown", default: "As an Amazon Associate I earn from qualifying purchases. We respect your privacy and do not collect personal data without consent."}
+          - {label: "Content", name: "content", widget: "markdown", default: "As an Amazon Associate I earn from qualifying purchases."}
