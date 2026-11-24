@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dansy Mart | Beauty Products &amp; Hair Styling Accessories on Amazon UK</title>
 <meta name="description" content="Discover hand-picked beauty products and hair styling accessories on Amazon UK.">
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -31,8 +30,7 @@
       <a href="#/blog">Blog</a>
       <a href="#/about">About</a>
       <a href="#/privacy" style="font-size:13px;">Privacy Policy</a>
-      <!-- YAHAN TARGET=_BLANK ADD KAR DIYA HAI -->
-      <a href="/admin" target="_blank" style="color:var(--rose); border:1px solid var(--rose); margin-left:10px;">Admin Login</a>
+      <!-- Admin Login button removed from here -->
     </nav>
     <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
       <span></span>
@@ -60,8 +58,7 @@
       <a href="#/blog">Blog</a>
       <a href="#/about">About</a>
       <a href="#/privacy">Privacy Policy</a>
-      <!-- YAHAN BHI TARGET=_BLANK ADD KAR DIYA HAI -->
-      <a href="/admin" target="_blank" style="color:var(--gold); font-weight:bold; margin-top:10px;">⚙️ Admin Login</a>
+      <!-- Admin Login button removed from here -->
     </div>
   </div>
   <div class="container footer-bottom">
@@ -74,10 +71,17 @@
 const AMAZON_TAG = 'danish08ee-21';
 function getAffiliateLink(url) { if (!url) return '#'; if (url.includes('tag=')) return url; return url + (url.includes('?') ? '&' : '?') + 'tag=' + AMAZON_TAG; }
 const $ = (sel) => document.querySelector(sel);
-function money(n){ return '£' + parseFloat(n||0).toFixed(2); }
+
+function money(n){ 
+  if (!n) return '£0.00';
+  let cleanStr = String(n).replace(/[^0-9.]/g, ''); 
+  let val = parseFloat(cleanStr);
+  if (isNaN(val)) return '£0.00';
+  return '£' + val.toFixed(2);
+}
+
 function stars(rating){ const r = Math.round(rating||5); let out = ''; for (let i = 1; i <= 5; i++) out += (i <= r ? '★' : '☆'); return out; }
 
-// State Data
 let PRODUCTS = [];
 let SETTINGS = { hero_heading: "Discover Your Beauty Essentials", hero_subheading: "Explore the best beauty and hair styling products on Amazon UK.", hero_image: "", about_text: "" };
 let PRIVACY = { title: "Privacy Policy", content: "Loading..." };
@@ -172,10 +176,6 @@ function viewBlog(){ return `<section class="page-head"><div class="container"><
 function viewPost(slug){ const post = POSTS.find(p=>p.slug===slug) || POSTS[0]; return `<section class="section"><div class="container"><div class="prose"><h1>${post.title}</h1>${post.body}</div></div></section>`; }
 
 function router(){
-  // YEH NAYI LINE HAI: Agar koi /admin par jaye toh website ka code usay overwrite na kare
-  if (window.location.pathname.includes('/admin')) return;
-
-  if (location.hash.includes('recovery_token') || location.hash.includes('invite_token') || location.hash.includes('confirmation_token')) return;
   const raw = location.hash.replace(/^#\/?/, '') || 'home';
   let html = '';
   
@@ -200,7 +200,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
   document.getElementById('footerCats').innerHTML = CATEGORIES.map(c => `<a href="#/best-sellers">${c.name}</a>`).join('');
 
-  // Load Data
   Promise.all([
     fetch('/products.json').then(r => r.json()).catch(() => ({products: []})),
     fetch('/settings.json').then(r => r.json()).catch(() => SETTINGS),
