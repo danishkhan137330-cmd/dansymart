@@ -1,6 +1,6 @@
 {
   "posts": [
-    { "title": "Heatless Curls That Actually Last", "category": "Hair Styling", "excerpt": "No heat, no damage. These accessories hold a curl all day.", "emoji": "🎀" },
-    { "title": "The £15 Skincare Routine", "category": "Skincare", "excerpt": "Three products. Under fifteen pounds.", "emoji": "🧴" }
+    { "title": "Heatless Curls That Actually Last", "category": "Hair Styling", "excerpt": "No heat, no damage. These accessories hold a curl all day.", "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" },
+    { "title": "The £15 Skincare Routine", "category": "Skincare", "excerpt": "Three products. Under fifteen pounds.", "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80" }
   ]
 }
