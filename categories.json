@@ -1,0 +1,9 @@
+{
+  "categories": [
+    { "name": "Skincare & Beauty", "emoji": "🧴", "blurb": "Serums, cleansers, moisturisers." },
+    { "name": "Hair Styling Tools", "emoji": "💨", "blurb": "Straighteners, dryers, hot brushes." },
+    { "name": "Heatless Curlers", "emoji": "🎀", "blurb": "Damage-free curls, claw clips." },
+    { "name": "Makeup & Brushes", "emoji": "💄", "blurb": "Blenders, brush sets." },
+    { "name": "Storage & Organisers", "emoji": "🗄️", "blurb": "Acrylic trays, vanity cases." }
+  ]
+}
