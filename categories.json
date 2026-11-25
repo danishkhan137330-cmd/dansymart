@@ -1,9 +1,9 @@
 {
   "categories": [
-    { "name": "Skincare & Beauty", "emoji": "🧴", "blurb": "Serums, cleansers, moisturisers." },
-    { "name": "Hair Styling Tools", "emoji": "💨", "blurb": "Straighteners, dryers, hot brushes." },
-    { "name": "Heatless Curlers", "emoji": "🎀", "blurb": "Damage-free curls, claw clips." },
-    { "name": "Makeup & Brushes", "emoji": "💄", "blurb": "Blenders, brush sets." },
-    { "name": "Storage & Organisers", "emoji": "🗄️", "blurb": "Acrylic trays, vanity cases." }
+    { "name": "Skincare & Beauty", "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=500&q=80", "blurb": "Serums, cleansers, moisturisers." },
+    { "name": "Hair Styling Tools", "image": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=500&q=80", "blurb": "Straighteners, dryers, hot brushes." },
+    { "name": "Heatless Curlers", "image": "https://images.unsplash.com/photo-1595079634865-5b1f2a467f27?w=500&q=80", "blurb": "Damage-free curls, claw clips." },
+    { "name": "Makeup & Brushes", "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500&q=80", "blurb": "Blenders, brush sets." },
+    { "name": "Storage & Organisers", "image": "https://images.unsplash.com/photo-1615397323137-89d5f3190d65?w=500&q=80", "blurb": "Acrylic trays, vanity cases." }
   ]
 }
