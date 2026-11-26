@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dansy Mart | Beauty Products &amp; Hair Styling Accessories</title>
-<!-- YAHAN FAVICON ADD KAR DIYA HAI -->
 <link rel="icon" type="image/png" href="/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +16,11 @@
 .site-header{position:sticky;top:0;z-index:60;background:rgba(251,247,240,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;justify-content:space-between;height:74px}.logo{font-family:'Playfair Display',serif;font-size:23px;font-weight:800;display:flex;align-items:center;gap:9px}.logo .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(140deg,var(--rose),var(--gold))}.logo em{color:var(--rose);font-style:normal}.nav-links{display:flex;gap:4px}.nav-links a{padding:9px 15px;border-radius:999px;font-size:14.5px;font-weight:600;color:#4C4249}.nav-links a:hover{background:var(--rose-soft);color:var(--rose)}
 .btn-amazon{display:flex;width:100%;align-items:center;justify-content:center;margin-top:10px;padding:10px;border-radius:999px;background:linear-gradient(100deg,var(--rose),var(--rose-bright));color:#fff;font-weight:800;font-size:12px}.grid{display:grid;gap:20px}.grid-4{grid-template-columns:repeat(4,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}
 .p-card{display:flex;flex-direction:column;background:var(--white);border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-soft)}.p-media{position:relative;aspect-ratio:1/1;display:grid;place-items:center;background:#fff;padding:10px}.p-media img{width:100%;height:100%;object-fit:contain}.p-body{display:flex;flex-direction:column;gap:6px;padding:16px;flex:1}.p-cat{font-size:10px;font-weight:800;text-transform:uppercase;color:var(--gold)}.p-body h3{font-size:0.95rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.p-price{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700}.p-desc{font-size:12px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.hero{padding:64px 0;background:radial-gradient(900px 420px at 88% -10%,rgba(228,114,143,.20),transparent 70%),var(--cream)}.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}.hero h1{font-size:clamp(2.3rem,5vw,4rem);margin-bottom:20px}.hero h1 em{color:var(--rose);font-style:italic}.hero .lead{font-size:1.1rem;color:var(--muted);margin-bottom:30px}.art-main{width:100%;max-width:400px;aspect-ratio:1/1;border-radius:34px;overflow:hidden;margin:0 auto;box-shadow:0 20px 40px -20px rgba(120,50,80,0.5)}.art-main img{width:100%;height:100%;object-fit:cover}
+.hero{padding:64px 0;background:radial-gradient(900px 420px at 88% -10%,rgba(228,114,143,.20),transparent 70%),var(--cream)}.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}.hero h1{font-size:clamp(2.3rem,5vw,4rem);margin-bottom:20px}.hero h1 em{color:var(--rose);font-style:italic}.hero .lead{font-size:1.1rem;color:var(--muted);margin-bottom:30px}
+/* HERO SLIDER STYLES */
+.art-main{width:100%;max-width:400px;aspect-ratio:1/1;border-radius:34px;overflow:hidden;margin:0 auto;box-shadow:0 20px 40px -20px rgba(120,50,80,0.5);position:relative;background:#fff}
+.art-main img{width:100%;height:100%;object-fit:cover;transition:opacity 0.5s ease-in-out;position:absolute;top:0;left:0}
+
 .search-container{max-width:600px;margin:0 auto 40px;position:relative}.search-input{width:100%;padding:16px 20px 16px 50px;border-radius:999px;border:1px solid var(--line);font-size:16px;box-shadow:var(--shadow-soft);outline:none}.search-input:focus{border-color:var(--rose)}.search-icon{position:absolute;left:20px;top:50%;transform:translateY(-50%);width:20px;height:20px;fill:var(--muted)}
 .testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.testimonial-card{background:#fff;padding:30px;border-radius:var(--radius);box-shadow:var(--shadow-soft);text-align:center}.stars{color:var(--gold);font-size:16px;margin-bottom:15px}.testimonial-card p{font-size:14.5px;font-style:italic;margin-bottom:20px}.testimonial-card strong{font-size:14px;display:block}.testimonial-card small{color:var(--gold);font-size:11px;text-transform:uppercase}
 /* Category Image Cards */
@@ -51,7 +54,10 @@
 
 <header class="site-header">
   <div class="container nav">
-    <a class="logo" href="#/home"><span class="dot"></span>Dansy<em>Mart</em></a>
+    <a class="logo" href="#/home">
+      <img src="/logo.png" alt="Dansy Mart" style="height:40px; width:auto; border-radius:8px;">
+      Dansy<em>Mart</em>
+    </a>
     <nav class="nav-links">
       <a href="#/home">Home</a>
       <a href="#/categories">Categories</a>
@@ -69,7 +75,10 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <div class="logo"><span class="dot"></span>Dansy<em>Mart</em></div>
+      <div class="logo" style="color:#fff;">
+        <img src="/logo.png" alt="Dansy Mart" style="height:40px; width:auto; border-radius:8px; margin-right:8px;">
+        Dansy<em>Mart</em>
+      </div>
       <p style="font-size:14px;margin-top:10px;color:#aaa;">Hand-picked beauty products from Amazon UK — tested and trusted.</p>
     </div>
     <div class="footer-col">
@@ -96,11 +105,9 @@ let PRODUCTS = [], CATEGORIES = [], TESTIMONIALS = [], POSTS = [];
 let SETTINGS = { hero_heading: "Discover Your Beauty Essentials", hero_subheading: "Explore the best beauty products on Amazon UK.", hero_image: "", about_text: "" };
 let PRIVACY = { title: "Privacy Policy", content: "Loading..." };
 let SEARCH_QUERY = "";
+let HERO_SLIDER_INTERVAL = null; // Variable to hold the timer
 
-// Default image if product has no image
 const DEFAULT_PRODUCT_IMG = "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&q=80";
-
-// SVG Search Icon
 const searchSvg = `<svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>`;
 
 function productCard(p) {
@@ -125,7 +132,7 @@ function viewHome(){
         <a href="#/best-sellers" style="display:inline-block;background:var(--rose);color:#fff;padding:14px 30px;border-radius:999px;font-weight:bold;">Shop Best Picks</a>
       </div>
       <div class="art-main">
-        <img src="${SETTINGS.hero_image ? SETTINGS.hero_image : defaultHero}" alt="Beauty Products">
+        <img id="hero-slider-img" src="${SETTINGS.hero_image ? SETTINGS.hero_image : defaultHero}" alt="Beauty Products">
       </div>
     </div>
   </section>
@@ -196,6 +203,37 @@ function viewList(title){
   return `<section class="page-head"><h1>${title}</h1></section><section class="section"><div class="container"><div class="search-container">${searchSvg}<input type="text" id="searchInput" class="search-input" placeholder="Search products..." value="${SEARCH_QUERY}" onkeyup="handleSearch(this.value)"></div><div class="grid grid-4">${filtered.map(p => productCard(p)).join('')}</div></div></section>`; 
 }
 
+// --- NAYA FUNCTION: HERO SLIDER LOGIC ---
+function startHeroSlider() {
+    if (HERO_SLIDER_INTERVAL) clearInterval(HERO_SLIDER_INTERVAL); // Clear old timer if any
+    
+    const sliderImg = document.getElementById('hero-slider-img');
+    if (!sliderImg) return;
+
+    // Images uthayen: Pehle settings wali, phir products wali
+    let images = [];
+    if (SETTINGS.hero_image) images.push(SETTINGS.hero_image);
+    
+    PRODUCTS.forEach(p => { if(p.image && !images.includes(p.image)) images.push(p.image); });
+
+    // Agar 1 se zyada images hain tabhi rotate karein
+    if (images.length > 1) {
+        let currentIndex = 0;
+        HERO_SLIDER_INTERVAL = setInterval(() => {
+            // Fade out
+            sliderImg.style.opacity = 0;
+            
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                sliderImg.src = images[currentIndex];
+                // Fade in
+                sliderImg.style.opacity = 1;
+            }, 500); // 0.5s wait for fade out
+
+        }, 2000); // Har 2 second baad change hoga
+    }
+}
+
 function router(){
   const raw = location.hash.replace(/^#\/?/, '') || 'home';
   let html = '';
@@ -209,6 +247,13 @@ function router(){
   else html = viewHome();
   
   document.getElementById('app').innerHTML = html;
+
+  // Agar homepage par hain toh slider start karein
+  if (raw === 'home') {
+      startHeroSlider();
+  } else {
+      if (HERO_SLIDER_INTERVAL) clearInterval(HERO_SLIDER_INTERVAL); // Baaki pages par timer band kar dein
+  }
 }
 
 function handleSearch(val) {
