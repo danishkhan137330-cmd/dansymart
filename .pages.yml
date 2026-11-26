@@ -27,7 +27,7 @@ content:
         list: true
         fields:
           - {name: name, label: Category Name, type: string}
-          - {name: emoji, label: Emoji Icon, type: string}
+          - {name: image, label: Category Image (Upload here), type: image}
           - {name: blurb, label: Short Description, type: string}
 
   - name: testimonials
@@ -57,7 +57,7 @@ content:
           - {name: title, label: Title, type: string}
           - {name: category, label: Category, type: string}
           - {name: excerpt, label: Short Excerpt, type: string}
-          - {name: emoji, label: Emoji Icon (e.g. 🎀), type: string}
+          - {name: image, label: Post Image, type: image}
 
   - name: settings
     label: "Website Settings"
