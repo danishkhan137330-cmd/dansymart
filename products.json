@@ -72,6 +72,13 @@
       "price": "11.90",
       "image": "/images/image-1-15.jpg",
       "link": "https://link.amazon/B08u6uiXj"
+    },
+    {
+      "name": "CeraVe Hydrating Cleanser, for normal to dry skin",
+      "description": "Gently cleanses, hydrates for 24 hours, restores skin barrier, non-foaming, fragrance-free, non-comedogenic.",
+      "price": "7.10",
+      "image": "/images/image-1-16.jpg",
+      "link": "https://link.amazon/B02XpcnKk"
     }
   ]
 }
