@@ -45,6 +45,16 @@
 .page-btn.active { background: var(--rose); color: #fff; border-color: var(--rose); }
 .page-btn:disabled { opacity: 0.4; cursor: not-allowed; box-shadow: none; }
 
+/* SINGLE PRODUCT VIEW STYLES */
+.single-product-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; background: #fff; padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-soft); margin-top: 40px; }
+.sp-image { width: 100%; border-radius: 16px; overflow: hidden; background: #f9f9f9; padding: 20px; }
+.sp-image img { width: 100%; height: auto; object-fit: contain; }
+.sp-info h1 { font-size: 2rem; margin-bottom: 15px; }
+.sp-price { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--rose); margin: 20px 0; }
+.sp-desc { font-size: 1.1rem; color: var(--muted); margin-bottom: 30px; line-height: 1.6; }
+.sp-btn { display: inline-flex; width: 100%; padding: 18px; font-size: 1.1rem; border-radius: 999px; text-decoration: none; }
+@media(max-width:768px){ .single-product-container { grid-template-columns: 1fr; padding: 20px; } }
+
 @media(max-width:1000px){.grid-4{grid-template-columns:repeat(3,1fr)}.hero-inner{grid-template-columns:1fr}.art-main{max-width:300px}.cat-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){.grid-4,.grid-3,.testimonial-grid,.cat-grid{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}.footer-inner{grid-template-columns:1fr}}
 @media(max-width:640px){.grid-4,.grid-3,.testimonial-grid,.cat-grid{grid-template-columns:1fr}}
@@ -109,15 +119,30 @@ let PRIVACY = { title: "Privacy Policy", content: "Loading..." };
 let SEARCH_QUERY = "";
 let HERO_SLIDER_INTERVAL = null;
 
-// PAGINATION VARIABLES (16 items = 4 lines of 4)
 let CURRENT_PAGE = 1;
 const ITEMS_PER_PAGE = 16; 
 
 const DEFAULT_PRODUCT_IMG = "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&q=80";
 const searchSvg = `<svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>`;
 
+// Card mein clickable link add kiya (taake log product page par ja saken)
 function productCard(p) {
-  return `<article class="p-card"><div class="p-media">${p.image ? `<img src="${p.image}" alt="${p.name}">` : `<img src="${DEFAULT_PRODUCT_IMG}" alt="${p.name}">`}</div><div class="p-body"><span class="p-cat">Beauty Pick</span><h3>${p.name}</h3><p class="p-desc">${p.description || ''}</p><div style="font-size:11px;color:var(--gold);">★★★★★ <span style="color:var(--muted);">(150)</span></div><div class="p-price">${money(p.price)}</div><a class="btn-amazon" href="${getAffiliateLink(p.link)}" target="_blank">View on Amazon →</a></div></article>`;
+  const slug = encodeURIComponent(p.name.toLowerCase().replace(/ /g, '-'));
+  return `<article class="p-card">
+    <a href="#/product/${slug}" style="display:block; text-decoration:none; color:inherit;">
+      <div class="p-media">${p.image ? `<img src="${p.image}" alt="${p.name}">` : `<img src="${DEFAULT_PRODUCT_IMG}" alt="${p.name}">`}</div>
+      <div class="p-body" style="padding-bottom:0;">
+        <span class="p-cat">Beauty Pick</span>
+        <h3>${p.name}</h3>
+      </div>
+    </a>
+    <div class="p-body" style="padding-top:5px;">
+      <p class="p-desc">${p.description || ''}</p>
+      <div style="font-size:11px;color:var(--gold);">★★★★★ <span style="color:var(--muted);">(150)</span></div>
+      <div class="p-price">${money(p.price)}</div>
+      <a class="btn-amazon" href="${getAffiliateLink(p.link)}" target="_blank">View on Amazon →</a>
+    </div>
+  </article>`;
 }
 
 function getFilteredProducts() {
@@ -125,14 +150,12 @@ function getFilteredProducts() {
     return PRODUCTS.filter(p => p.name.toLowerCase().includes(SEARCH_QUERY.toLowerCase()) || (p.description && p.description.toLowerCase().includes(SEARCH_QUERY.toLowerCase())));
 }
 
-// Products ko pages mein baantne ke liye
 function getPaginatedProducts(filteredProducts) {
     const startIndex = (CURRENT_PAGE - 1) * ITEMS_PER_PAGE;
     const endIndex = startIndex + ITEMS_PER_PAGE;
     return filteredProducts.slice(startIndex, endIndex);
 }
 
-// 1,2,3, Next wale buttons banane ke liye
 function renderPagination(totalItems) {
     const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
     if (totalPages <= 1) return ''; 
@@ -163,7 +186,6 @@ function renderPagination(totalItems) {
     return html;
 }
 
-// Page change karne par scroll
 function changePage(page) {
     CURRENT_PAGE = page;
     router();
@@ -197,7 +219,7 @@ function startHeroSlider() {
 
 function viewHome(){
   const filtered = getFilteredProducts();
-  const paginated = getPaginatedProducts(filtered); // Apply pagination
+  const paginated = getPaginatedProducts(filtered); 
   const defaultHero = "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80";
   
   return `
@@ -276,18 +298,49 @@ function viewHome(){
   </section>`;
 }
 
+// NAYA: SINGLE PRODUCT VIEW (Sirf 1 product dikhane ke liye)
+function viewSingleProduct(slug) {
+  const productName = decodeURIComponent(slug).replace(/-/g, ' ').toLowerCase();
+  const product = PRODUCTS.find(p => p.name.toLowerCase() === productName || p.name.toLowerCase().replace(/ /g, '-') === decodeURIComponent(slug).toLowerCase());
+
+  if (!product) {
+    return `<section class="section" style="min-height:60vh;"><div class="container"><h1>Product not found</h1><a href="#/home" class="btn-amazon" style="width:auto; padding:10px 20px;">Back to Home</a></div></section>`;
+  }
+
+  return `
+  <section class="section" style="background:var(--cream); min-height:80vh;">
+    <div class="container">
+      <a href="javascript:history.back()" style="display:inline-block; margin-bottom:20px; font-weight:bold; color:var(--muted);">← Go Back</a>
+      <div class="single-product-container">
+        <div class="sp-image">
+          <img src="${product.image || DEFAULT_PRODUCT_IMG}" alt="${product.name}">
+        </div>
+        <div class="sp-info">
+          <span class="eyebrow">Dansy Mart Pick</span>
+          <h1>${product.name}</h1>
+          <div style="color:var(--gold); font-size:1.2rem;">★★★★★ <span style="color:var(--muted); font-size:1rem;">(150+ Reviews)</span></div>
+          <div class="sp-price">${money(product.price)}</div>
+          <p class="sp-desc">${product.description || 'No description available for this product.'}</p>
+          <a class="btn-amazon sp-btn" href="${getAffiliateLink(product.link)}" target="_blank">View on Amazon →</a>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
 function viewAbout(){ return `<section class="section" style="min-height:60vh;"><div class="container"><div class="prose"><h1>About Dansy Mart</h1><p>${SETTINGS.about_text.replace(/\n/g, '<br>')}</p></div></div></section>`; }
 function viewPrivacy(){ return `<section class="section" style="min-height:60vh;"><div class="container"><div class="prose"><h1>${PRIVACY.title}</h1><p>${PRIVACY.content.replace(/\n/g, '<br>')}</p></div></div></section>`; }
 
 function viewList(title){ 
   const filtered = getFilteredProducts();
-  const paginated = getPaginatedProducts(filtered); // Apply pagination
+  const paginated = getPaginatedProducts(filtered); 
   return `<section class="page-head"><h1>${title}</h1></section><section class="section"><div class="container"><div class="search-container">${searchSvg}<input type="text" id="searchInput" class="search-input" placeholder="Search products..." value="${SEARCH_QUERY}" onkeyup="handleSearch(this.value)"></div><div class="grid grid-4">${paginated.map(p => productCard(p)).join('')}</div>${renderPagination(filtered.length)}</div></section>`; 
 }
 
 function router(){
   const raw = location.hash.replace(/^#\/?/, '') || 'home';
   let html = '';
+  
   if(raw === 'home') html = viewHome();
   else if(raw === 'best-sellers') html = viewList('Best Sellers');
   else if(raw === 'budget-picks') html = viewList('Budget Picks');
@@ -295,6 +348,13 @@ function router(){
   else if(raw === 'about') html = viewAbout();
   else if(raw === 'privacy') html = viewPrivacy();
   else if(raw === 'blog') html = `<section class="page-head"><h1>The Blog</h1></section><section class="section"><div class="container"><div class="grid grid-3">${POSTS.map(p => `<div class="blog-card"><div class="blog-img"><img src="${p.image}"></div><div class="blog-body"><h3>${p.title}</h3><p>${p.excerpt}</p></div></div>`).join('')}</div></div></section>`;
+  
+  // NAYA: Single product routing handle kiya
+  else if(raw.startsWith('product/')) {
+      const slug = raw.split('/')[1];
+      html = viewSingleProduct(slug);
+  }
+  
   else html = viewHome();
   
   document.getElementById('app').innerHTML = html;
@@ -305,7 +365,7 @@ function router(){
 
 function handleSearch(val) {
     SEARCH_QUERY = val;
-    CURRENT_PAGE = 1; // Search karte waqt page 1 par le aayen
+    CURRENT_PAGE = 1; 
     const input = document.getElementById('searchInput');
     const cursorPos = input.selectionStart;
     router();
