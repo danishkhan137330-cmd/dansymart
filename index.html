@@ -17,13 +17,10 @@
 .btn-amazon{display:flex;width:100%;align-items:center;justify-content:center;margin-top:10px;padding:10px;border-radius:999px;background:linear-gradient(100deg,var(--rose),var(--rose-bright));color:#fff;font-weight:800;font-size:12px}.grid{display:grid;gap:20px}.grid-4{grid-template-columns:repeat(4,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}
 .p-card{display:flex;flex-direction:column;background:var(--white);border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-soft)}.p-media{position:relative;aspect-ratio:1/1;display:grid;place-items:center;background:#fff;padding:10px}.p-media img{width:100%;height:100%;object-fit:contain}.p-body{display:flex;flex-direction:column;gap:6px;padding:16px;flex:1}.p-cat{font-size:10px;font-weight:800;text-transform:uppercase;color:var(--gold)}.p-body h3{font-size:0.95rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.p-price{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700}.p-desc{font-size:12px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .hero{padding:64px 0;background:radial-gradient(900px 420px at 88% -10%,rgba(228,114,143,.20),transparent 70%),var(--cream)}.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}.hero h1{font-size:clamp(2.3rem,5vw,4rem);margin-bottom:20px}.hero h1 em{color:var(--rose);font-style:italic}.hero .lead{font-size:1.1rem;color:var(--muted);margin-bottom:30px}
-/* HERO SLIDER STYLES */
 .art-main{width:100%;max-width:400px;aspect-ratio:1/1;border-radius:34px;overflow:hidden;margin:0 auto;box-shadow:0 20px 40px -20px rgba(120,50,80,0.5);position:relative;background:#fff}
 .art-main img{width:100%;height:100%;object-fit:cover;transition:opacity 0.5s ease-in-out;position:absolute;top:0;left:0}
-
 .search-container{max-width:600px;margin:0 auto 40px;position:relative}.search-input{width:100%;padding:16px 20px 16px 50px;border-radius:999px;border:1px solid var(--line);font-size:16px;box-shadow:var(--shadow-soft);outline:none}.search-input:focus{border-color:var(--rose)}.search-icon{position:absolute;left:20px;top:50%;transform:translateY(-50%);width:20px;height:20px;fill:var(--muted)}
 .testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.testimonial-card{background:#fff;padding:30px;border-radius:var(--radius);box-shadow:var(--shadow-soft);text-align:center}.stars{color:var(--gold);font-size:16px;margin-bottom:15px}.testimonial-card p{font-size:14.5px;font-style:italic;margin-bottom:20px}.testimonial-card strong{font-size:14px;display:block}.testimonial-card small{color:var(--gold);font-size:11px;text-transform:uppercase}
-/* Category Image Cards */
 .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .cat-tile{position:relative;height:200px;border-radius:var(--radius);overflow:hidden;display:flex;align-items:flex-end;padding:24px;text-decoration:none;box-shadow:var(--shadow-soft)}
 .cat-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:transform 0.4s ease}
@@ -33,16 +30,21 @@
 .cat-content h3{font-size:1.3rem;margin-bottom:5px}
 .cat-content p{font-size:13px;color:#ddd;margin-bottom:10px}
 .cat-content span{font-size:12px;font-weight:800;text-transform:uppercase;color:var(--gold)}
-
-/* Blog Image Cards */
 .blog-card{display:flex;flex-direction:column;background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-soft);text-decoration:none;color:var(--ink)}
 .blog-img{aspect-ratio:16/9;overflow:hidden}
 .blog-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease}
 .blog-card:hover .blog-img img{transform:scale(1.05)}
 .blog-body{padding:24px;display:flex;flex-direction:column;gap:10px}
-
 .site-footer{background:#221C1F;color:#DED5DA;padding:56px 0 0}.footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:38px;padding-bottom:40px}.footer-brand .logo{color:#fff;margin-bottom:12px}.footer-col h4{color:var(--gold);font-size:12px;text-transform:uppercase;margin-bottom:14px}.footer-col a{display:block;font-size:13.8px;padding:5px 0;color:#C7BDC3}.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:22px 0;text-align:center;font-size:12px;color:#9A8F96}
 .page-head{padding:56px 0;background:var(--cream);text-align:center}.prose{max-width:740px;margin:0 auto;font-size:1.05rem;line-height:1.8}.prose h1{margin-bottom:20px}
+
+/* PAGINATION STYLES */
+.pagination { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 50px; flex-wrap: wrap; }
+.page-btn { padding: 10px 16px; border: 1px solid var(--line); background: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; color: var(--ink); transition: all 0.2s; box-shadow: var(--shadow-soft); }
+.page-btn:hover:not(:disabled) { background: var(--rose-soft); color: var(--rose); border-color: var(--rose); }
+.page-btn.active { background: var(--rose); color: #fff; border-color: var(--rose); }
+.page-btn:disabled { opacity: 0.4; cursor: not-allowed; box-shadow: none; }
+
 @media(max-width:1000px){.grid-4{grid-template-columns:repeat(3,1fr)}.hero-inner{grid-template-columns:1fr}.art-main{max-width:300px}.cat-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){.grid-4,.grid-3,.testimonial-grid,.cat-grid{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}.footer-inner{grid-template-columns:1fr}}
 @media(max-width:640px){.grid-4,.grid-3,.testimonial-grid,.cat-grid{grid-template-columns:1fr}}
@@ -105,7 +107,11 @@ let PRODUCTS = [], CATEGORIES = [], TESTIMONIALS = [], POSTS = [];
 let SETTINGS = { hero_heading: "Discover Your Beauty Essentials", hero_subheading: "Explore the best beauty products on Amazon UK.", hero_image: "", about_text: "" };
 let PRIVACY = { title: "Privacy Policy", content: "Loading..." };
 let SEARCH_QUERY = "";
-let HERO_SLIDER_INTERVAL = null; // Variable to hold the timer
+let HERO_SLIDER_INTERVAL = null;
+
+// PAGINATION VARIABLES (16 items = 4 lines of 4)
+let CURRENT_PAGE = 1;
+const ITEMS_PER_PAGE = 16; 
 
 const DEFAULT_PRODUCT_IMG = "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&q=80";
 const searchSvg = `<svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>`;
@@ -119,8 +125,79 @@ function getFilteredProducts() {
     return PRODUCTS.filter(p => p.name.toLowerCase().includes(SEARCH_QUERY.toLowerCase()) || (p.description && p.description.toLowerCase().includes(SEARCH_QUERY.toLowerCase())));
 }
 
+// Products ko pages mein baantne ke liye
+function getPaginatedProducts(filteredProducts) {
+    const startIndex = (CURRENT_PAGE - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    return filteredProducts.slice(startIndex, endIndex);
+}
+
+// 1,2,3, Next wale buttons banane ke liye
+function renderPagination(totalItems) {
+    const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+    if (totalPages <= 1) return ''; 
+
+    let html = `<div class="pagination">`;
+    html += `<button class="page-btn" onclick="changePage(${CURRENT_PAGE - 1})" ${CURRENT_PAGE === 1 ? 'disabled' : ''}>Previous</button>`;
+
+    let startPage = Math.max(1, CURRENT_PAGE - 2);
+    let endPage = Math.min(totalPages, startPage + 4);
+    if (endPage - startPage < 4) startPage = Math.max(1, endPage - 4);
+
+    if (startPage > 1) {
+        html += `<button class="page-btn" onclick="changePage(1)">1</button>`;
+        if (startPage > 2) html += `<span style="color:var(--muted);">...</span>`;
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+        html += `<button class="page-btn ${i === CURRENT_PAGE ? 'active' : ''}" onclick="changePage(${i})">${i}</button>`;
+    }
+
+    if (endPage < totalPages) {
+        if (endPage < totalPages - 1) html += `<span style="color:var(--muted);">...</span>`;
+        html += `<button class="page-btn" onclick="changePage(${totalPages})">${totalPages}</button>`;
+    }
+
+    html += `<button class="page-btn" onclick="changePage(${CURRENT_PAGE + 1})" ${CURRENT_PAGE === totalPages ? 'disabled' : ''}>Next</button>`;
+    html += `</div>`;
+    return html;
+}
+
+// Page change karne par scroll
+function changePage(page) {
+    CURRENT_PAGE = page;
+    router();
+    const productSection = document.querySelector('.section');
+    if (productSection) {
+        window.scrollTo({ top: productSection.offsetTop - 100, behavior: 'smooth' });
+    }
+}
+
+function startHeroSlider() {
+    if (HERO_SLIDER_INTERVAL) clearInterval(HERO_SLIDER_INTERVAL);
+    const sliderImg = document.getElementById('hero-slider-img');
+    if (!sliderImg) return;
+
+    let images = [];
+    if (SETTINGS.hero_image) images.push(SETTINGS.hero_image);
+    PRODUCTS.forEach(p => { if(p.image && !images.includes(p.image)) images.push(p.image); });
+
+    if (images.length > 1) {
+        let currentIndex = 0;
+        HERO_SLIDER_INTERVAL = setInterval(() => {
+            sliderImg.style.opacity = 0;
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                sliderImg.src = images[currentIndex];
+                sliderImg.style.opacity = 1;
+            }, 500);
+        }, 2000); 
+    }
+}
+
 function viewHome(){
   const filtered = getFilteredProducts();
+  const paginated = getPaginatedProducts(filtered); // Apply pagination
   const defaultHero = "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80";
   
   return `
@@ -146,7 +223,10 @@ function viewHome(){
   <section class="section" style="padding-top: 20px;">
     <div class="container">
       <div class="section-head center"><span class="eyebrow">Featured Products</span><h2>Trending beauty picks</h2></div>
-      ${filtered.length > 0 ? `<div class="grid grid-4">${filtered.map(p => productCard(p)).join('')}</div>` : `<p style="text-align:center;">No products found for "${SEARCH_QUERY}"</p>`}
+      ${filtered.length > 0 
+        ? `<div class="grid grid-4">${paginated.map(p => productCard(p)).join('')}</div>
+           ${renderPagination(filtered.length)}` 
+        : `<p style="text-align:center;">No products found for "${SEARCH_QUERY}"</p>`}
     </div>
   </section>
 
@@ -198,40 +278,11 @@ function viewHome(){
 
 function viewAbout(){ return `<section class="section" style="min-height:60vh;"><div class="container"><div class="prose"><h1>About Dansy Mart</h1><p>${SETTINGS.about_text.replace(/\n/g, '<br>')}</p></div></div></section>`; }
 function viewPrivacy(){ return `<section class="section" style="min-height:60vh;"><div class="container"><div class="prose"><h1>${PRIVACY.title}</h1><p>${PRIVACY.content.replace(/\n/g, '<br>')}</p></div></div></section>`; }
+
 function viewList(title){ 
   const filtered = getFilteredProducts();
-  return `<section class="page-head"><h1>${title}</h1></section><section class="section"><div class="container"><div class="search-container">${searchSvg}<input type="text" id="searchInput" class="search-input" placeholder="Search products..." value="${SEARCH_QUERY}" onkeyup="handleSearch(this.value)"></div><div class="grid grid-4">${filtered.map(p => productCard(p)).join('')}</div></div></section>`; 
-}
-
-// --- NAYA FUNCTION: HERO SLIDER LOGIC ---
-function startHeroSlider() {
-    if (HERO_SLIDER_INTERVAL) clearInterval(HERO_SLIDER_INTERVAL); // Clear old timer if any
-    
-    const sliderImg = document.getElementById('hero-slider-img');
-    if (!sliderImg) return;
-
-    // Images uthayen: Pehle settings wali, phir products wali
-    let images = [];
-    if (SETTINGS.hero_image) images.push(SETTINGS.hero_image);
-    
-    PRODUCTS.forEach(p => { if(p.image && !images.includes(p.image)) images.push(p.image); });
-
-    // Agar 1 se zyada images hain tabhi rotate karein
-    if (images.length > 1) {
-        let currentIndex = 0;
-        HERO_SLIDER_INTERVAL = setInterval(() => {
-            // Fade out
-            sliderImg.style.opacity = 0;
-            
-            setTimeout(() => {
-                currentIndex = (currentIndex + 1) % images.length;
-                sliderImg.src = images[currentIndex];
-                // Fade in
-                sliderImg.style.opacity = 1;
-            }, 500); // 0.5s wait for fade out
-
-        }, 2000); // Har 2 second baad change hoga
-    }
+  const paginated = getPaginatedProducts(filtered); // Apply pagination
+  return `<section class="page-head"><h1>${title}</h1></section><section class="section"><div class="container"><div class="search-container">${searchSvg}<input type="text" id="searchInput" class="search-input" placeholder="Search products..." value="${SEARCH_QUERY}" onkeyup="handleSearch(this.value)"></div><div class="grid grid-4">${paginated.map(p => productCard(p)).join('')}</div>${renderPagination(filtered.length)}</div></section>`; 
 }
 
 function router(){
@@ -248,16 +299,13 @@ function router(){
   
   document.getElementById('app').innerHTML = html;
 
-  // Agar homepage par hain toh slider start karein
-  if (raw === 'home') {
-      startHeroSlider();
-  } else {
-      if (HERO_SLIDER_INTERVAL) clearInterval(HERO_SLIDER_INTERVAL); // Baaki pages par timer band kar dein
-  }
+  if (raw === 'home') { startHeroSlider(); } 
+  else { if (HERO_SLIDER_INTERVAL) clearInterval(HERO_SLIDER_INTERVAL); }
 }
 
 function handleSearch(val) {
     SEARCH_QUERY = val;
+    CURRENT_PAGE = 1; // Search karte waqt page 1 par le aayen
     const input = document.getElementById('searchInput');
     const cursorPos = input.selectionStart;
     router();
